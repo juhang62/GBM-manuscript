@@ -24,9 +24,7 @@
 \begin{document}
 \global\long\def\pardiff#1#2{\frac{\partial#1}{\partial#2}}%
 
-\title{A Data-Driven Model of Glioblastoma Multiforme Growth with Explicit
-Birth and Death Rates\thanks{tentative title; candidate title: Estimation of vital parameters of
-GBM spatio-temporal dynamics }}
+\title{Estimation of Vital Parameters of Glioblastoma Multiforme Growth Dynamics from a Model with Explicit Birth and Death Rates}
 
 \author{%
   Lifeng Han\affil{1},
@@ -47,26 +45,23 @@ GBM spatio-temporal dynamics }}
   \addr{\affilnum{2}}{Department of Neurosurgery Research, Barrow Neurological Institute, St. Joseph’s Hospital and Medical Center, Phoenix, AZ 85013, USA}}
 
 % corresponding author
-\corraddr{kuang@asu.edu; Tel: +1-111-111-1111; Fax:\\ +1-111-111-1111.
-}
+\corraddr{kuang@asu.edu}
 
 \begin{abstract}
 Glioblastoma multiforme (GBM) is an aggressive brain cancer with grim
 prognosis. Its morphology is characterized by layered structure, i.e.,
 an inner necrotic core and an outer rim of proliferating cells. This
-structure can be observed in magnetic resonance images images. A mathematical
+structure can be observed in magnetic resonance images. A mathematical
 model of GBM growth with explicit birth and death rate is proposed.
-This model demonstrates a traveling wave. We develop a method to compute
-some characteristics of the approximate wave profile, which can be
-matched with image data. Various forms of growth and death terms and
-their parameter identifiability are studied. We use image data of
-GBM patients to get personalized parameterization of the model, of
-which the biological and clinical implications are discussed. 
+This model generates a traveling wave which mimic the cancer progression. 
+We develop some novel methods to approximate key characteristics of 
+the wave profile, which can be compared with image data. Several simplistic 
+forms of growth and death terms and their parameter identifiability are 
+studied. We use image data of GBM patients to get personalized parameterization 
+of the model, of which the biological and clinical implications are discussed. 
 \end{abstract}
 
-\keywords{
-Glioblastoma multiforme modeling; parameter estimation; traveling wave; necrosis; proliferation
-}
+\keywords{Glioblastoma multiforme modeling; parameter estimation; traveling wave; necrosis; proliferation}
 
 \maketitle
 
@@ -76,58 +71,70 @@ Glioblastoma multiforme (GBM) is a type of the most aggressive brain
 cancer. Patients with GBM have a mean survival length less than 15
 months from the time of diagnosis \cite{Norden2006}. Its fast progression
 is characterized by highly proliferating and invasive cancer cells.
-Its tumor morphology manifests a layered structure: there is a necrotic
-core at the center, a band of proliferating cells at the outer rim
-and a transition layer of quiescent cancer cells in between. The tumor
-can be visualized by magnetic resonance (MR) imaging, which is commonly
-used to inform clinical decisions. One of the hallmarks of GBM is
-its heterogeneity between individual patients, imposing a challenge
-to its treatment. 
+The information on individual GBM patients are very scarce while challenges 
+to treat GBM are numerous. A key piece of information clinical doctors may 
+have for their GBM patients are MRI images. Often there is only one image 
+that lead to the diagnosis and the patients are immediately scheduled for 
+surgery. The main questions for surgeons are how much and where to cut and 
+how soon the cancer will emerge and where. These are decades old questions 
+that surface in other type of cancer treatments. 
 
-Mathematical modeling can offer a way to tackle this challenge. Mathematical
-modeling has provided a lot of insight to our understanding of cancer
-and its treatment \cite{Kuang}. Mathematical models on GBM are abundant
-(see \cite{GBMreview} for a review). A popular type of those models
-employs reaction-diffusion equations. In many cases \cite{Harley2014,Gerlee2016,Stepien2018},
-those systems exhibit a traveling wave solution of which the speed
-is of great interests since it is related to how fast cancer progress. 
+GBM morphology manifests a layered structure: there is a necrotic
+core at the center, a band of proliferating cells at the outer rim
+and a transition layer of quiescent cancer cells in between. GBM
+can be visualized by magnetic resonance (MR) imaging, which is commonly
+used to inform clinical decisions. One of the hallmarks of cancer in 
+general, and GBM in particular, is its heterogeneity between individual 
+patients. This heterogeneity imposes a challenge to GBM treatment. 
+
+Appropriate mathematical models may offer a way to tackle this challenge. 
+Mathematical modeling has already provided many valuable insights to our 
+understanding of cancer and its treatment \cite{Kuang}. Mathematical models 
+on GBM are formulated to provide new tools for studying the growth of gliomas and for practical applications (see \cite{GBMreview} for a review). A popular type of those models oftem takes the form of a system of reaction-diffusion equations. In many cases \cite{Harley2014,Gerlee2016,Stepien2018},
+those systems generate a traveling wave solution of which the speed
+is of great interests since it is related to how fast cancer progresses. 
 
 However, models which confront the heterogeneity of GBM directly by
-utilizing spatio-temporal patient-specific data are rare. Swanson
+utilizing spatiotemporal patient-specific data are rare. Swanson
 and her collaborators \cite{Swanson2008,Neal2013,Jackson2015a} is
-one of the few teams which focus on this endeavor. They used the well-known
-Fisher's equation \cite{FISHER1937} (called PI model in \cite{Jackson2015a})
-and parameterized it using MR images. The estimated proliferation
+one of the few teams which focus on this endeavor. They employed 
+variants of the well-known Fisher's equation to study cancer cells'
+proliferation (P) and invasion (I) dynamics \cite{FISHER1937} 
+(hence called PI model in \cite{Jackson2015a})
+and parameterized it using patient MR images. The estimated proliferation
 and diffusion parameters and a model-derived metric called days gained
-are deemed to be instrumental to clinical treatments. But their treating
-the cancer cells as a single species is an oversimplification and
-by doing so the structured morphology of GBM has to be ignored. Although
-there are modeling works taking into account of multi-species nature
-of cancer cells \cite{Eikenberry2009,Swanson2011}, they are oftentimes
-too complicated to be practically useful given scarcity of image data
-of an individual patient. To fill this gap, we propose a model which
-includes two species of cancer cells, i.e., proliferating and quiescent,
-and is capable of exploiting the structural information offered by
-one or two MR scans. 
+are deemed to be instrumental to clinical treatments. 
+
+Treating the cancer cells as a single species can be a gross simplification and
+by doing so the structured morphology of GBM is lost. Although there are modeling 
+efforts taking into account of multi-species nature of cancer cells \cite{Eikenberry2009,Swanson2011}, they are usually too complicated to be 
+practically useful given scarcity of patient specific images. 
+
+For most GBM patients and their doctors, available MRI images maybe all taken
+at the same day or at just two different days. Practical modeling efforts must be constrained by such brutal data limitation and formulate models which can be parameterized with the images at hand. Recognizing this reality, we propose a model 
+which includes two species of cancer cells, i.e., proliferating and quiescent,
+and is capable of exploiting the structural information offered by only
+one or two MRI images. 
 
 Gliomas can only be imaged indirectly on MRI, and are typically characterized,
 on T1-weighted sequences, by a large, often necrotic core region surrounded
 by a bright enhancing rim that correlates with high blood vessel density
-and (presumably) rapid cell proliferation. Finally, this core and
+and (presumably) rapid cell proliferation. This core and
 rim is usually surrounded by a large expanse of edema that is visible
 on T2-weighted MRI, and may represent diffusely invasive, highly motile
-cells. Thus, we have three basic signals from imaging: necrotic radius,
-enhancing radius, and T2 (or maximum) radius. We hypothesized that
-a relatively simple mathematical model framework can capture all three
-signals, and yield insight into the relative contributions of cellular
-proliferation, motility, and necrosis to each major feature.
+GBM cells. Thus, we have three digital marks from imaging: necrotic radius,
+enhancing radius, and T2 (or maximum) radius. We hypothesize that a relatively 
+simple mathematical model framework may capture all these three
+digital marks, and yield insights into the relative contributions of cellular
+proliferation, motility, and necrosis to the observed image features.
 
 The paper is organized as following. We first describe our model and
 its assumptions. Then we demonstrate that the model has a traveling
-wave solution and work out its approximate wave profile. We devise
-a simple procedure to estimate the parameters by fitting the approximate
-wave profile to image data, for which identifiability is checked.
-This procedure is then applied to several patient-specific data. 
+wave solution and present the approximate wave profile. We devise
+a simple procedure to estimate patient-specific parameters by fitting the approximate
+wave profile to that of patient images. Identifiability of parameters is also 
+discussed. Moreover, we apply this parameter estimation procedure to 
+obtain the cancer vital dynamics parameters (consisting of the rate of cancer cell proliferation, death and diffusion) for several patients.  
 
 
 
@@ -138,7 +145,7 @@ equations
 
 \begin{subequations}\label{eq:main3d}
 \begin{eqnarray}
-\pardiff pt & = & \nabla\cdot\bigg[\frac{Dp}{p+q}\nabla(p+q)\bigg]+\tilde{g}(w)p-\tilde{\delta}(w)p\\
+\pardiff pt & = & \nabla\cdot\bigg[\frac{Dp}{p+q}\nabla(p+q)\bigg]+\tilde{g}(w)p-\tilde{\delta}(w)p,\\
 \pardiff qt & = & \nabla\cdot\bigg[\frac{Dq}{p+q}\nabla(p+q)\bigg]+\tilde{\delta}(w)p,
 \end{eqnarray}
 \end{subequations}where two species are considered: proliferating
@@ -152,19 +159,19 @@ is believed to be a realistic account of cancer cell movements \cite{Sherratt200
 
 Per capita birth rate is $\tilde{g}(w)$ and the proliferating cells
 become quiescent with per capita rate $\tilde{\delta}(w)$. Both of
-them is a function of $w$. We define $w=1-p-q$, interpreted as availability
+them are functions of $w$. We define $w=1-p-q$, interpreted as availability
 of space or some generic nutrient (we call it growth factor henceforth).
 By doing so, we have scaled the maximum cell density to be 1. In our
-model, necrosis is not explicitly included but can be thought of being
+model, necrosis is not explicitly included but can be regarded as being
 lumped into $q$. This choice is supported by the fact that MR only
 visualizes proliferating cells and does not distinguish between quiescence
-and necrosis, and the decision to keep the model simple enough so
-that it makes use of available information without over-complicating
-the problem. Note that quiescent cells can not become proliferating
+and necrosis. Our motivation of keeping the model simple enough is to estimate 
+model parameters based on information that can be provided by the images. 
+Note that quiescent cells can not become proliferating
 again but only turns into necrosis. Therefore $\tilde{\delta}(w)$
-can be thought of as death rate. 
+can be viewed as death rate. 
 
-In order to achieve biological meaning, we impose the following constraints
+In order to make the model biologically reasonable, we impose the following constraints
 on $g(w)$ and $\delta(w)$: 
 \begin{equation}
 \tilde{g}'(w)\ge0,\tilde{\delta}'(w)\le0,\tilde{g}(1)\ge\tilde{\delta}(1)=0,\tilde{\delta}(0)>\tilde{g}(0)=0.\label{eq:1st assumption}
@@ -173,11 +180,11 @@ That is, birth/death should increase/decrease with availability of
 the growth factor, and there is more birth than death at maximum growth
 factor while there is only death and no growth in absence of growth
 factor. It is also assumed that death rate is negligible at maximum
-growth factor. With those assumptions, it can be shown that the solution
+growth factor. With these assumptions, it can be shown that the solution
 of (\ref{eq:main3d}) stay nonnegtive and is bounded by $p+q\le1$
-for all $t$ with suitable initial condition. 
+for all $t$ with the usual suitable initial condition. 
 
-We can estimate three parameters based on the three pieces of information
+We can only estimate up to three parameters based on the three pieces of information
 we can derive from MR images. Therefore we want a few more restrictions
 on $\tilde{g}(w)$ and $\tilde{\delta}(w)$ for the ease of parameter
 estimation and ensure their identifiability. Since we can only introduce
@@ -185,8 +192,9 @@ two more parameters in addition to diffusion coefficient $D$, we
 introduce $\rho$ and $k$ into $\tilde{g}(w)$ and $\tilde{\delta}(w)$
 respectively and indicate their dependence on the parameters as $\tilde{g}(w;\rho)$
 and $\tilde{\delta}(w;k)$. It is desirable to make the proliferating
-rate at maximum growth factor and death rate at zero growth factor
-be $\rho$ and $\delta$, i.e., $\tilde{g}(1,\rho)=\rho,\ \tilde{\delta}(0;k)=k$.
+rate at maximum growth factor be $\rho$
+and death rate at zero growth factor
+be $k$, i.e., $\tilde{g}(1,\rho)=\rho,\ \tilde{\delta}(0;k)=k$.
 For reasons that will become clear later, we pick the functional form
 which can be written as $\tilde{g}(w;\rho)=\rho g(w)$ and $\tilde{\delta}(w;k)=k\delta(w)$.
 Although we have stated several additional assumptions, it should
@@ -195,68 +203,71 @@ of our model. The benefit of including them will become clear in the
 section of parameter estimation. 
 
 \subsection{Approximate wave profile}
-We consider one spatial dimension for simplicity. It is justified
+In most biological applications of reaction-diffusion models, solutions quickly take the forms of traveling waves. MRI images of GBM cancer growth suggests we can approximate
+the cancer population growth curve by a traveling wave solution of its growth model.
+In order to uniquely identify and accurately approximate GBM growth model parameters,
+it is highly desirable to obtain some analytic approximation of the travel wave so a 
+computational match of the image wave profile and the approximate model wave profile can be made.
+To this end and for simplicity, we consider one spatial dimension. It is justified
 by the fact that the tumor is mostly spherical and at the time of
 diagnosis its radius is large enough so that radial effect is negligible.
-Together with the aforementioned assumptions, the equations now write
-as 
+Together with the aforementioned assumptions, the equations may take the following forms:
 
 \begin{subequations}\label{eq:main}
 \begin{eqnarray}
-\pardiff pt & = & \pardiff{}x\bigg[\frac{Dp}{p+q}\pardiff{}x(p+q)\bigg]+\rho g(w)p-k\delta(w)p\\
-\pardiff qt & = & \pardiff{}x\bigg[\frac{Dq}{p+q}\pardiff{}x(p+q)\bigg]+k\delta(w)p,
+\pardiff pt & = & \pardiff{}x\bigg[\frac{Dp}{p+q}\pardiff{}x(p+q)\bigg]+\rho g(w)p-k\delta(w)p,\\
+\pardiff qt & = & \pardiff{}x\bigg[\frac{Dq}{p+q}\pardiff{}x(p+q)\bigg]+k\delta(w)p.
 \end{eqnarray}
 \end{subequations}We nondimensionlize the system using the characteristic
 length $\sqrt{D/k}$ and the characteristic time $1/k$ so that $x=\sqrt{D/k}\hat{x}$
 and $t=\hat{t}/k$, which leads to \begin{subequations}\label{eq:dpdt dqdt}
 \begin{eqnarray}
-\pardiff p{\hat{t}} & = & \pardiff{}{\hat{x}}\bigg[\frac{p}{p+q}\pardiff{}{\hat{x}}(p+q)\bigg]+\hat{\rho}g(w)p-\delta(w)p\\
+\pardiff p{\hat{t}} & = & \pardiff{}{\hat{x}}\bigg[\frac{p}{p+q}\pardiff{}{\hat{x}}(p+q)\bigg]+\hat{\rho}g(w)p-\delta(w)p,\\
 \pardiff q{\hat{t}} & = & \pardiff{}{\hat{x}}\bigg[\frac{q}{p+q}\pardiff{}{\hat{x}}(p+q)\bigg]+\delta(w)p,
 \end{eqnarray}
 \end{subequations}where $\hat{\rho}=\rho/k$. We are seeking a traveling
 wave solution, i.e., $p(\xi)=p(\hat{x}-c\hat{t}),q(\xi)=q(\hat{x}-c\hat{t})$
-where $c$ is wave speed and there is a slight abuse of notation.
+where $c$ is wave speed.
 Substituting these into (\ref{eq:dpdt dqdt}) gives 
 
 \begin{subequations}\label{eq:in wave cord}
 \begin{eqnarray}
-(\frac{p}{p+q}(p+q)')'+cp'+\hat{\rho}g(w)p-\delta(w)p & = & 0\\
+(\frac{p}{p+q}(p+q)')'+cp'+\hat{\rho}g(w)p-\delta(w)p & = & 0,\\
 (\frac{q}{p+q}(p+q)')'+cq'+\delta(w)p & = & 0,
 \end{eqnarray}
 \end{subequations} where the prime indicates the derivative with
 respect to $\xi$. Linearizing at the wave head, i.e., substitute
 an ansztz $p=Ae^{-r\xi}$ and $q=Be^{-r\xi}$ into (\ref{eq:in wave cord})
-gives $(r^{2}-cr+\rho)A=0$. The nontrivial $A$ entails the minimum
+gives $(r^{2}-cr+\rho)A=0$. For biologically realistic wave front, we expect $A>0,\, B>0$ and $r>0$.
+This requires that $c^2>4\rho$, which implies that the minimum
 speed of the wave $c_{\min}=2\sqrt{\hat{\rho}}$ . It is numerically
 verified that the minimum speed is exactly the asymptotic speed, i.e.,
 $c=c_{\min}$.
 
-To obtain a approximate wave profile, we adopt a method first used
-by \cite{Canosa1973}. We rescale the wave coordinate $z=-\text{\ensuremath{\xi/c}}$,
+To obtain a approximate wave profile, we adopt a popular method first used
+by Canosa in \cite{Canosa1973}. We rescale the wave coordinate $z=-\text{\ensuremath{\xi/c}}$,
 which leads to
 
 \begin{subequations}\label{eq:1/c^2}
 \begin{eqnarray}
-\frac{1}{c^{2}}(\frac{p}{p+q}(p+q)')'-p'+\hat{\rho}g(w)p-\delta(w)p & = & 0\label{eq:1/c^2a}\\
+\frac{1}{c^{2}}(\frac{p}{p+q}(p+q)')'-p'+\hat{\rho}g(w)p-\delta(w)p & = & 0,\label{eq:1/c^2a}\\
 \frac{1}{c^{2}}(\frac{q}{p+q}(p+q)')'-q'+\delta(w)p & = & 0,\label{eq:1/c^2b}
 \end{eqnarray}
 \end{subequations}where the prime indicates the derivative with respect
 to $z$. Assuming that $1/c^{2}$ is small, we neglect the first terms
 of (\ref{eq:1/c^2a}),(\ref{eq:1/c^2b}). Writing the system in terms
-of $p$ and $w$, we get the reduced system as below
+of $p$ and $w$, we obtain the following reduced system 
 
 \begin{subequations}\label{eq:pp system}
 \begin{align}
-\frac{dp}{dz} & =p(\hat{\rho}g(w)-\delta(w))\label{eq:dpdz}\\
+\frac{dp}{dz} & =p(\hat{\rho}g(w)-\delta(w)),\label{eq:dpdz}\\
 \frac{dw}{dz} & =-\hat{\rho}pg(w),\label{eq:dwdz}
 \end{align}
 \end{subequations}which is amenable to phase plane analysis. The
 approximate wave solution corresponds to a trajectory that leaves
 $(0,1)$ and ends at $(0,w^{*})$ with $w^{*}\in[0,1)$ (see Figure
 \ref{fig:pp}). Its existence based on assumptions (\ref{eq:1st assumption})
-is shown in the appendix. With a specific choice of $g(w)$ and $\delta(w)$,
-the trajectory can be found by taking(\ref{eq:dpdz}) over (\ref{eq:dwdz}),
-which gives 
+is shown in the appendix. Dividing(\ref{eq:dpdz}) by (\ref{eq:dwdz}) yields 
 \[
 \frac{dp}{dw}=\frac{\delta(w)}{\hat{\rho}g(w)}-1.
 \]
@@ -265,22 +276,22 @@ which we will make use of in the next section.
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.35]{\string"uw plane dashed\string".png}\caption{\label{fig:pp}A typical trajectory corresponds to a approximate traveling
-wave}
+\includegraphics[scale=0.35]{\string"uw plane dashed\string".png}\caption{\label{fig:pp}A typical trajectory corresponds to an approximate traveling
+wave.}
 \end{center}
 \end{figure}
 
 \subsection{Parameter estimation}
 
-We first discuss the three pieces of information which we can get
-from MR images and fit our model to. There are two types of MR: T1
+We first discuss the three key values which we may obtain
+from MR images and use that to fit our model. There are two types of MR: T1
 highlights high density of proliferating cells while T2 has a lower
-detection threshold. We denote the their detection thresholds as $100\times a_{1}\%$
+detection threshold. We denote their detection thresholds as $100\times a_{1}\%$
 and $100\times a_{2}\%$ of $p_{\max}=\max_{z}\{p(z)\}$ (the actual
 maximum density of proliferating cells given by the traveling wave
 solution) with $a_{1}>a_{2}$. To fit our 1-D model, we convert necrotic
 core volume, T1 volume and T2 volume into equivalent spheres with
-their radius denoted by $R_{0},R_{1}$ and $R_{2}$ (to do: figure
+their radius denoted by $R_{0},R_{1}$ and $R_{2}$, respectively (to do: figure
 needed). Therefore, the width of proliferating rim denoted as $L_{1}$
 and $L_{2}$ for T1 and T2 images can be calculated, i.e., $L_{1}=R_{1}-R_{0}$
 and $L_{2}=R_{2}-R_{1}$. Typically, there are two MR scans before
@@ -467,7 +478,7 @@ Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2} $s$^{-1}$ & $\rho
 \end{center}
 
 
-\caption{\label{fig:comparison-to-numerical}scatter plots of approximate wave
+\caption{\label{fig:comparison-to-numerical}Scatter plots of approximate wave
 profile characteristics (on horizontal axis) verses the ones obtained
 by numerical simulation (on vertical axis) for a range of $\hat{\rho}$
 from 0.5 to 5 by incremental 0.5. The size the the dot corresponds
@@ -552,8 +563,9 @@ which often focus on experimental data.
 \section*{Acknowledgments}
 The authors would like to thank Leslie Baxter and Leland Ho at Barrow
 Neurological Institute for providing MR images. The work is supported
-by Arizona Biomedical Research Commission. NSF NIH.
+by an grant from Arizona Biomedical Research Center. \\
 
+REFERENCES SHOULD BE CONSISTENT IN STYLE.
 %\section*{Conflict of interest}
 
 \begin{thebibliography}{10}
@@ -703,7 +715,7 @@ K~R Swanson, R~C Rostomily, and E~C Alvord.
 \end{thebibliography}
 %For more questions regarding reference style, please refer to the \href{http://www.ncbi.nlm.nih.gov/books/NBK7256/}{Citing Medicine}.
 
-\section*{Supplementary (if necessary)}
+\section*{Supplementary (YES. PLEASE EXPAND ON IT WITH A FIGURE. if necessary)}
 
 We perform phase plane ($w$-$p$ plane) analysis of (\ref{eq:pp system})
 to show the existence of a trajectory that starts from $(1,0)$ and
@@ -721,6 +733,6 @@ $w^{\dagger}\in(0,1)$ such that $\rho g(w^{\dagger})=\delta(w^{\dagger})$.
 For $w>w^{\dagger}$, the trajectory has positive slope and hence
 heading down to the $w$-axis. Since $\frac{dw}{dz}\vert_{w=0}=0$,
 the trajectory cannot cross $p$-axis. Thus it must intersect the
-$w$-axis at some $w^{*}\in(0,w^{\dagger})$ 
+$w$-axis at some pont $w^{*}\in(0,w^{\dagger}).$ 
 
 \end{document}
