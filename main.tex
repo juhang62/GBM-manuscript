@@ -267,17 +267,18 @@ of $p$ and $w$, we obtain the following reduced system
 approximate wave solution corresponds to a trajectory that leaves
 $(0,1)$ and ends at $(0,w^{*})$ with $w^{*}\in[0,1)$ (see Figure
 \ref{fig:pp}). Its existence based on assumptions (\ref{eq:1st assumption})
-is shown in the appendix. Dividing(\ref{eq:dpdz}) by (\ref{eq:dwdz}) yields 
-\[
+is shown in the appendix. Dividing (\ref{eq:dpdz}) by (\ref{eq:dwdz}) yields 
+
+\begin{equation} \label{eq:dpdw}
 \frac{dp}{dw}=\frac{\delta(w)}{\hat{\rho}g(w)}-1.
-\]
+\end{equation}
+
  Upon integration we get $p$ as a function of $w$, i.e., $p=p(w)$,
 which we will make use of in the next section. 
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.35]{\string"uw plane dashed\string".png}\caption{\label{fig:pp}A typical trajectory corresponds to an approximate traveling
-wave.}
+\includegraphics[scale=0.65]{plots/pp.eps}\caption{\label{fig:pp}A typical trajectory that connects (0,1) and $(0,w^*)$ in the phase plane. Given $\delta(w)$ and $g(w)$, this trajectory can be found by integrating (\ref{eq:dpdw}). This trajectory represents an approximate traveling wave solution and its existence under general assumptions is shown in supplemental material.}
 \end{center}
 \end{figure}
 
@@ -309,41 +310,24 @@ rim width (in dimensional form) is computed as below
 \ell_{1} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw\label{eq:l1}\\
 \ell_{2} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{+}}^{w_{2}}\frac{dz}{dw}dw,\label{eq:l2}
 \end{eqnarray}
-\end{subequations}where $w_{1}^{\pm}$ and $w_{2}$ satisfy $p(w_{1}^{\pm})=a_{1}p_{\text{max}},p(w_{2})=a_{2}p_{\max}$
-(see also Figure \ref{fig:pp}). Additionally, model-derived wave
+\end{subequations}
+
+where $w_{1}^{\pm}$ and $w_{2}$ satisfy $p(w_{1}^{\pm})=a_{1}p_{\text{max}},p(w_{2})=a_{2}p_{\max}$ with $p(w)$ resulted from integration of (\ref{eq:dpdw}). Additionally, model-derived wave
 speed $c=2\sqrt{\rho D}$ can be matched with image-derived speed
 $V$. Thus we have three nonlinear equations 
 \begin{equation}
 \{\ell_{1}=L_{1},\ell_{2}=L_{2},c=V\},\label{eq:l1l2c}
 \end{equation}
- from which we hope to find parameters $D,\rho$ and $k$. Thanks
+ from which we hope to find parameters $D,\rho$ and $k$. Due
 to the assumptions we made before, we can simply take the ratio of
 (\ref{eq:l1}) and (\ref{eq:l2}), which gives 
 \begin{equation}
-f(\frac{\rho}{k})\equiv\frac{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}=\frac{L_{1}}{L_{2}},\label{eq:f(rho/k)}
+f(\hat{\rho})\equiv\frac{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}=\frac{L_{1}}{L_{2}},\label{eq:f(rho/k)}
 \end{equation}
-where we note that the integrals are a function of $\rho/k$. (\ref{eq:f(rho/k)})
-can be solved for $\rho/k$ analytically in special cases or numerically
+where we note that the integrals are a function of $\hat{\rho}$. (\ref{eq:f(rho/k)})
+can be solved for $\hat{\rho}$ analytically in special cases or numerically
 in general. We note that the monotonicity of $f(\cdot)$ is important
-for identifiability of parameters. Once we find $\rho/k$, it can
-be back substitute to find all parameters. 
-
-It is often observed in MR images that the tumor morphology is not
-perfectly invariant over the course of tumor growth, i.e., the wave
-profile changes over time. We suspect that the proliferating and diffusion
-parameters ($\rho$ and $D$) can change because of mutation while
-there is little change in $k$. In this sense, the procedure above
-can be simply extended. For example, if MR images taken at two different
-time gives different rim width $\{L_{1},L_{2}\},\{L_{1}',L_{2}'\}$,
-then we can estimate $\rho,D,\rho',D',k$ by solving the following
-system of 5 equations 
-\[
-\{\ell_{1}=L_{1},\ell_{2}=L_{2},\ell_{1}'=L_{1}',\ell_{2}'=L_{2}',V=\frac{2}{1/c+1/c'}\},
-\]
-where we have taken the image-derived wave speed be a harmonic mean
-of model-derived wave speed at the two different times. It is motivated
-by our belief that the mutation tends be correlated with tumor size
-other than time. 
+for identifiability of parameters. Once we find $\hat{\rho}$, i.e., the ratio $\rho /k$, all parameters can be found by back substitution. 
 
 The above method requires two MR scans taken at two consecutive times
 before surgery in order to obtain image-derived wave speed. If the
@@ -360,20 +344,18 @@ $R_{2}$ more than the one using $R_{3}$. Assuming that from $t=0$
 to $t=t^{*}$, the T1 volume of the tumor expands exponentially and
 then follows linear growth with speed $2\sqrt{\rho D}$, and that
 exponential growth stage of T2 volume is negligible, we have 
-\begin{eqnarray*}
+\begin{eqnarray}
 \frac{R_{1}-r_{0}(e^{\rho t^{*}})^{1/3}}{2\sqrt{\rho D}}+t^{*} & = & \frac{R_{2}}{2\sqrt{\rho D}},
-\end{eqnarray*}
-where $r_{0}$ is the initial tumor radius and $t^{*}$ is the length
-of the exponential growth stage. Replacing the last equation in (\ref{eq:l1l2c})
+\end{eqnarray}
+by equating the two age estimations. Coming from the assumption of exponential growth of tumor volume, the term $r_{0}(e^{\rho t^{*}})^{1/3}$ is the T1 radius at the end of the exponential growth stage, where $r_0$ is the initial tumor radius . Replacing the last equation in (\ref{eq:l1l2c})
 with the equation above, we have again three equations for which we
 can solve for the three unknown parameters. 
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.3]{plots/Fig2.JPG}
+\includegraphics[scale=0.6]{plots/waveprofile.eps}\includegraphics[scale=0.33]{plots/MR.png}
 \end{center}
-\caption{\label{fig:Match wid}Match model-derived quantities to image-derived
-quantities (to do: need redo this figure)}
+\caption{\label{fig:Match wid} Left: normalized wave profile generated by the model. Right: tumor profile seen in MR image. Parameter estimation is done by matching model-derived quantities, e.g., $\ell_1$ and $\ell_2$, to the corresponding image-derived ones. }
 
 \end{figure}
 
@@ -418,37 +400,9 @@ from the image data.
 \begin{center}
 \includegraphics[scale=0.5]{plots/frhok/betas-new}\includegraphics[scale=0.5]{plots/frhok/frhok-new}
 \end{center}
-\caption{\label{fig:beta =000026 f}left: cdf of some beta distribution. right:
-monotonicity of $f(\cdot)$ given different choices of $g(w)$ and
-$\delta(w)$ as indicated in the legend}
+\caption{\label{fig:beta =000026 f}Left: cdf of some beta distribution. These functions satisfy (\ref{eq:1st assumption})  and serve as reasonable candidates to phenomenologically represent biological response to limitation of growth factors. Right:
+monotonicity of $f(\cdot)$ given different choices of $g(w)$ and $\delta(w)$ as indicated in the legend. All choices lead to monotonic function $f(\cdot)$ and hence identifiable parameters.}
 \end{figure}
-
-
-%\begin{table}
-%\begin{tabular}{r@{\extracolsep{0pt}.}lcccccc}
-%\toprule 
-%Patient no& & $R_{0}$, mm & $R_{1}$, mm & $R_{3}$, mm & $D$, mm$^{2}$s$^{-1}$ & $\rho$, s$^{-1}$ & $k$, s$^{-1}$\tabularnewline
-%\midrule
-%\midrule 
-%\multicolumn{2}{c}{1} & 14.87  & 15.24  & 15.83 & 0.2873 & 0.0529 & 0.0152\tabularnewline
-%\midrule 
-%\multicolumn{2}{c}{2} & 20.73  & 22.87  & 20.35 & 0.9009 & 0.0462 & 0.0623\tabularnewline
-%\midrule 
-%\multicolumn{2}{c}{3} & 27.77  & 26.96  & 19.83 & 0.1080 & 0.0568 & 0.0107\tabularnewline
-%\midrule 
-%\multicolumn{2}{c}{4} & 20.48  & 37.03  & 23.80 & 0.6747 & 0.0445 & 0.1342\tabularnewline
-%\midrule 
-%\multicolumn{2}{c}{5} & 26.34  & 8.17  & 38.05 & 0.7374 & 0.0476 & 0.0426\tabularnewline
-%\midrule 
-%\multicolumn{2}{c}{6} & 38.24  & 14.20  & 13.31 & 0.1057 & 0.0635 & 0.0041\tabularnewline
-%\midrule 
-%\multicolumn{2}{c}{7} & 10.91  & 8.29  & 34.33 & 1.2655 & 0.0460 & 0.0645\tabularnewline
-%\bottomrule
-%\end{tabular}
-%\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived
-%from T1 and T2 images and their corresponding estimated parameters }
-%
-%\end{table}
 
 \begin{table}[H]
 \begin{center}
@@ -482,7 +436,7 @@ Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2} $s$^{-1}$ & $\rho
 profile characteristics (on horizontal axis) verses the ones obtained
 by numerical simulation (on vertical axis) for a range of $\hat{\rho}$
 from 0.5 to 5 by incremental 0.5. The size the the dot corresponds
-to the value of $\hat{\rho}$. }
+to the value of $\hat{\rho}$. The dots scatter closely to the diagonal line with slope 1, indicating agreement between the numerical solution and our approximation.}
 \end{figure}
  
 
@@ -565,168 +519,217 @@ The authors would like to thank Leslie Baxter and Leland Ho at Barrow
 Neurological Institute for providing MR images. The work is supported
 by an grant from Arizona Biomedical Research Center. \\
 
-REFERENCES SHOULD BE CONSISTENT IN STYLE.
 %\section*{Conflict of interest}
 
+%\bibliographystyle{AIMS}
+%\bibliography{ref}
+
+\providecommand{\href}[2]{#2}
+\providecommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
 \begin{thebibliography}{10}
 
 \bibitem{Canosa1973}
-Jose Canosa.
-\newblock {On a Nonlinear Diffusion Equation Describing Population Growth}.
-\newblock {\em IBM Journal of Research and Development}, 17(4):307--313, jul
-  1973.
+\newblock J.~Canosa,
+\newblock {On a Nonlinear Diffusion Equation Describing Population Growth},
+\newblock \emph{IBM Journal of Research and Development}, \textbf{17} (1973),
+  307--313,
+\newblock \urlprefix\url{http://ieeexplore.ieee.org/document/5391351/}.
 
 \bibitem{Dunbar1983}
-StevenR. Dunbar.
-\newblock {Travelling wave solutions of diffusive Lotka-Volterra equations}.
-\newblock {\em Journal of Mathematical Biology}, 17(1):11--32, may 1983.
+\newblock S.~Dunbar,
+\newblock {Travelling wave solutions of diffusive Lotka-Volterra equations},
+\newblock \emph{Journal of Mathematical Biology}, \textbf{17} (1983), 11--32,
+\newblock \urlprefix\url{http://link.springer.com/10.1007/BF00276112}.
 
 \bibitem{Eikenberry2009}
-S.~E. Eikenberry, T.~Sankar, M.~C. Preul, E.~J. Kostelich, C.~J. Thalhauser,
-  and Y.~Kuang.
+\newblock S.~E. Eikenberry, T.~Sankar, M.~C. Preul, E.~J. Kostelich, C.~J.
+  Thalhauser and Y.~Kuang,
 \newblock {Virtual glioblastoma: Growth, migration and treatment in a
-  three-dimensional mathematical model}.
-\newblock {\em Cell Proliferation}, 42(4):511--528, 2009.
+  three-dimensional mathematical model},
+\newblock \emph{Cell Proliferation}, \textbf{42} (2009), 511--528.
 
 \bibitem{FISHER1937}
-R.~A. FISHER.
-\newblock {THE WAVE OF ADVANCE OF ADVANTAGEOUS GENES}.
-\newblock {\em Annals of Eugenics}, 7(4):355--369, jun 1937.
+\newblock R.~A. Fisher,
+\newblock {The wave of advance of advantageous genes},
+\newblock \emph{Annals of Eugenics}, \textbf{7} (1937), 355--369,
+\newblock
+  \urlprefix\url{http://doi.wiley.com/10.1111/j.1469-1809.1937.tb02153.x}.
 
 \bibitem{Gerlee2016}
-Philip Gerlee and Sven Nelander.
+\newblock P.~Gerlee and S.~Nelander,
 \newblock {Travelling wave analysis of a mathematical model of glioblastoma
-  growth}.
-\newblock {\em Mathematical Biosciences}, 276:75--81, jun 2016.
+  growth},
+\newblock \emph{Mathematical Biosciences}, \textbf{276} (2016), 75--81,
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/abs/pii/S0025556416000602?via{\%}3Dihub}.
 
 \bibitem{Harley2014}
-K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet, and M.~Wechselberger.
+\newblock K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet and
+  M.~Wechselberger,
 \newblock {Existence of Traveling Wave Solutions for a Model of Tumor
-  Invasion}.
-\newblock {\em SIAM Journal on Applied Dynamical Systems}, 13(1):366--396, jan
-  2014.
+  Invasion},
+\newblock \emph{SIAM Journal on Applied Dynamical Systems}, \textbf{13} (2014),
+  366--396,
+\newblock \urlprefix\url{http://epubs.siam.org/doi/10.1137/130923129}.
 
 \bibitem{Jackson2015a}
-Pamela~R. Jackson, Joseph Juliano, Andrea Hawkins-Daarud, Russell~C. Rockne,
-  and Kristin~R. Swanson.
+\newblock P.~R. Jackson, J.~Juliano, A.~Hawkins-Daarud, R.~C. Rockne and K.~R.
+  Swanson,
 \newblock {Patient-Specific Mathematical Neuro-Oncology: Using a Simple
-  Proliferation and Invasion Tumor Model to Inform Clinical Practice}.
-\newblock {\em Bulletin of Mathematical Biology}, 77(5):846--856, may 2015.
+  Proliferation and Invasion Tumor Model to Inform Clinical Practice},
+\newblock \emph{Bulletin of Mathematical Biology}, \textbf{77} (2015),
+  846--856,
+\newblock \urlprefix\url{http://link.springer.com/10.1007/s11538-015-0067-7}.
 
 \bibitem{Kim2017}
-Minsun Kim, Jakob Kotas, Jason Rockhill, Mark Phillips, Minsun Kim, Jakob
-  Kotas, Jason Rockhill, and Mark Phillips.
+\newblock M.~Kim, J.~Kotas, J.~Rockhill, M.~Phillips, M.~Kim, J.~Kotas,
+  J.~Rockhill and M.~Phillips,
 \newblock {A Feasibility Study of Personalized Prescription Schemes for
-  Glioblastoma Patients Using a Proliferation and Invasion Glioma Model}.
-\newblock {\em Cancers}, 9(12):51, may 2017.
+  Glioblastoma Patients Using a Proliferation and Invasion Glioma Model},
+\newblock \emph{Cancers}, \textbf{9} (2017), 51,
+\newblock \urlprefix\url{http://www.mdpi.com/2072-6694/9/5/51}.
 
 \bibitem{Kostelich2011}
-Eric~J Kostelich, Yang Kuang, Joshua~M McDaniel, Nina~Z Moore, Nikolay~L
-  Martirosyan, and Mark~C Preul.
+\newblock E.~J. Kostelich, Y.~Kuang, J.~M. McDaniel, N.~Z. Moore, N.~L.
+  Martirosyan and M.~C. Preul,
 \newblock {Accurate state estimation from uncertain data and models: an
   application of data assimilation to mathematical models of human brain
-  tumors}.
-\newblock {\em Biology Direct}, 6(1):64, dec 2011.
+  tumors},
+\newblock \emph{Biology Direct}, \textbf{6} (2011), 64,
+\newblock
+  \urlprefix\url{http://biologydirect.biomedcentral.com/articles/10.1186/1745-6150-6-64}.
 
 \bibitem{Kuang}
-Yang Kuang, John~D. Nagy, and Stephen~E. Eikenberry.
-\newblock {\em {Introduction to mathematical oncology}}.
+\newblock Y.~Kuang, J.~D. Nagy and S.~E. Eikenberry,
+\newblock \emph{{Introduction to mathematical oncology}},
 \newblock Chapman and Hall/CRC.
 
 \bibitem{Madzvamuse2017}
-Anotida Madzvamuse, Raquel Barreira, and Alf Gerisch.
+\newblock A.~Madzvamuse, R.~Barreira and A.~Gerisch,
 \newblock {Cross-Diffusion in Reaction-Diffusion Models: Analysis, Numerics,
-  and Applications}.
-\newblock pages 385--392. Springer, Cham, 2017.
+  and Applications},
+\newblock Springer, Cham, 2017,
+\newblock 385--392,
+\newblock
+  \urlprefix\url{http://link.springer.com/10.1007/978-3-319-63082-3{\_}61}.
 
 \bibitem{GBMreview}
-Nikolay~L. Martirosyan, Erica~M. Rutter, Wyatt~L. Ramey, Eric~J. Kostelich,
-  Yang Kuang, and Mark~C. Preul.
+\newblock N.~L. Martirosyan, E.~M. Rutter, W.~L. Ramey, E.~J. Kostelich,
+  Y.~Kuang and M.~C. Preul,
 \newblock {Mathematically modeling the biological properties of gliomas: A
-  review}.
-\newblock {\em Mathematical Biosciences and Engineering}, 12(4):879--905, apr
-  2015.
+  review},
+\newblock \emph{Mathematical Biosciences and Engineering}, \textbf{12} (2015),
+  879--905,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/25974347
+  http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
 
 \bibitem{McDaniel2013}
-Joshua McDaniel, Eric Kostelich, Yang Kuang, John Nagy, Mark~C. Preul, Nina~Z.
-  Moore, and Nikolay~L. Matirosyan.
-\newblock {Data Assimilation in Brain Tumor Models}.
-\newblock pages 233--262. Springer, New York, NY, 2013.
+\newblock J.~McDaniel, E.~Kostelich, Y.~Kuang, J.~Nagy, M.~C. Preul, N.~Z.
+  Moore and N.~L. Matirosyan,
+\newblock {Data Assimilation in Brain Tumor Models},
+\newblock Springer, New York, NY, 2013,
+\newblock 233--262,
+\newblock
+  \urlprefix\url{http://link.springer.com/10.1007/978-1-4614-4178-6{\_}9}.
 
 \bibitem{Neal2013}
-Maxwell~Lewis Neal, Andrew~D. Trister, Tyler Cloke, Rita Sodt, Sunyoung Ahn,
-  Anne~L. Baldock, Carly~A. Bridge, Albert Lai, Timothy~F. Cloughesy, Maciej~M.
-  Mrugala, Jason~K. Rockhill, Russell~C. Rockne, and Kristin~R. Swanson.
+\newblock M.~L. Neal, A.~D. Trister, T.~Cloke, R.~Sodt, S.~Ahn, A.~L. Baldock,
+  C.~A. Bridge, A.~Lai, T.~F. Cloughesy, M.~M. Mrugala, J.~K. Rockhill, R.~C.
+  Rockne and K.~R. Swanson,
 \newblock {Discriminating Survival Outcomes in Patients with Glioblastoma Using
-  a Simulation-Based, Patient-Specific Response Metric}.
-\newblock {\em PLoS ONE}, 8(1):e51951, jan 2013.
+  a Simulation-Based, Patient-Specific Response Metric},
+\newblock \emph{PLoS ONE}, \textbf{8} (2013), e51951,
+\newblock \urlprefix\url{https://dx.plos.org/10.1371/journal.pone.0051951}.
 
 \bibitem{Norden2006}
-Andrew~D Norden and Patrick~Y Wen.
-\newblock {Glioma therapy in adults}.
-\newblock {\em The neurologist}, 12(6):279--92, nov 2006.
+\newblock A.~D. Norden and P.~Y. Wen,
+\newblock {Glioma therapy in adults},
+\newblock \emph{The neurologist}, \textbf{12} (2006), 279--92,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/17122724}.
 
 \bibitem{Rutter2017}
-Erica~M Rutter, Tracy~L Stepien, Barrett~J Anderies, Jonathan~D Plasencia,
-  Eric~C Woolf, Adrienne~C Scheck, Gregory~H Turner, Qingwei Liu, David Frakes,
-  Vikram Kodibagkar, Yang Kuang, Mark~C Preul, and Eric~J Kostelich.
-\newblock {Mathematical Analysis of Glioma Growth in a Murine Model}.
-\newblock {\em Scientific reports}, 7(1):2508, 2017.
+\newblock E.~M. Rutter, T.~L. Stepien, B.~J. Anderies, J.~D. Plasencia, E.~C.
+  Woolf, A.~C. Scheck, G.~H. Turner, Q.~Liu, D.~Frakes, V.~Kodibagkar,
+  Y.~Kuang, M.~C. Preul and E.~J. Kostelich,
+\newblock {Mathematical Analysis of Glioma Growth in a Murine Model},
+\newblock \emph{Scientific reports}, \textbf{7} (2017), 2508,
+\newblock
+  \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/28566701{\%}5Cnhttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC5451439}.
 
 \bibitem{Sherratt2000}
-Jonathan~A. Sherratt.
+\newblock J.~A. Sherratt,
 \newblock {Wavefront propagation in a competition equation with a new motility
-  term modelling contact inhibition between cell populations}.
-\newblock {\em Proceedings of the Royal Society of London. Series A:
-  Mathematical, Physical and Engineering Sciences}, 456(2002):2365--2386, oct
-  2000.
+  term modelling contact inhibition between cell populations},
+\newblock \emph{Proceedings of the Royal Society of London. Series A:
+  Mathematical, Physical and Engineering Sciences}, \textbf{456} (2000),
+  2365--2386,
+\newblock
+  \urlprefix\url{http://www.royalsocietypublishing.org/doi/10.1098/rspa.2000.0616}.
 
 \bibitem{Sherratt2001}
-Jonathan~A. Sherratt and Mark~A.J. Chaplain.
-\newblock {A new mathematical model for avascular tumour growth}.
-\newblock {\em Journal of Mathematical Biology}, 43(4):291--312, oct 2001.
+\newblock J.~A. Sherratt and M.~A. Chaplain,
+\newblock {A new mathematical model for avascular tumour growth},
+\newblock \emph{Journal of Mathematical Biology}, \textbf{43} (2001), 291--312,
+\newblock \urlprefix\url{http://link.springer.com/10.1007/s002850100088}.
 
 \bibitem{Stepien2015a}
-Tracy~L Stepien, Erica~M Rutter, and Yang Kuang.
+\newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
 \newblock {A data-motivated density-dependent diffusion model of in vitro
-  glioblastoma growth.}
-\newblock {\em Mathematical biosciences and engineering : MBE}, 12(6):1157--72,
-  dec 2015.
+  glioblastoma growth.},
+\newblock \emph{Mathematical biosciences and engineering : MBE}, \textbf{12}
+  (2015), 1157--72,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/26775861}.
 
 \bibitem{Stepien2018}
-Tracy~L. Stepien, Erica~M. Rutter, and Yang Kuang.
-\newblock {Traveling Waves of a Go-or-Grow Model of Glioma Growth}.
-\newblock {\em SIAM Journal on Applied Mathematics}, 78(3):1778--1801, jan
-  2018.
+\newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
+\newblock {Traveling Waves of a Go-or-Grow Model of Glioma Growth},
+\newblock \emph{SIAM Journal on Applied Mathematics}, \textbf{78} (2018),
+  1778--1801,
+\newblock \urlprefix\url{https://epubs.siam.org/doi/10.1137/17M1146257}.
 
 \bibitem{Swanson2011}
-K.~R. Swanson, R.~C. Rockne, J.~Claridge, M.~A. Chaplain, E.~C. Alvord, and
-  A.~R.~A. Anderson.
+\newblock K.~R. Swanson, R.~C. Rockne, J.~Claridge, M.~A. Chaplain, E.~C.
+  Alvord and A.~R.~A. Anderson,
 \newblock {Quantifying the Role of Angiogenesis in Malignant Progression of
-  Gliomas: In Silico Modeling Integrates Imaging and Histology}.
-\newblock {\em Cancer Research}, 71(24):7366--7375, dec 2011.
+  Gliomas: In Silico Modeling Integrates Imaging and Histology},
+\newblock \emph{Cancer Research}, \textbf{71} (2011), 7366--7375,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/21900399
+  http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC3398690
+  http://cancerres.aacrjournals.org/cgi/doi/10.1158/0008-5472.CAN-11-1399}.
 
 \bibitem{Swanson2008}
-K~R Swanson, R~C Rostomily, and E~C Alvord.
+\newblock K.~R. Swanson, R.~C. Rostomily and E.~C. Alvord,
 \newblock {A mathematical modelling tool for predicting survival of individual
-  patients following resection of glioblastoma: a proof of principle}.
-\newblock {\em British Journal of Cancer}, 98(1):113--119, jan 2008.
+  patients following resection of glioblastoma: a proof of principle},
+\newblock \emph{British Journal of Cancer}, \textbf{98} (2008), 113--119,
+\newblock \urlprefix\url{http://www.nature.com/articles/6604125}.
 
 \end{thebibliography}
+
+
 %For more questions regarding reference style, please refer to the \href{http://www.ncbi.nlm.nih.gov/books/NBK7256/}{Citing Medicine}.
 
-\section*{Supplementary (YES. PLEASE EXPAND ON IT WITH A FIGURE. if necessary)}
+\section*{Supplementary}
 
-We perform phase plane ($w$-$p$ plane) analysis of (\ref{eq:pp system})
+We perform phase plane ($w$-$p$ plane, see Figure \ref{fig:pp}) analysis of (\ref{eq:pp system})
 to show the existence of a trajectory that starts from $(1,0)$ and
 ends at $(w^{*},0)$ where $w^{*}\ge0$ if (\ref{eq:1st assumption})
-are satisfied. First we note that $(1,0)$ is an unstable fixed point
+are satisfied. The Jacobian matrix at (0,1) is 
+\begin{equation}
+\begin{bmatrix}
+\hat{\rho} & 0\\
+-\hat{\rho} & 0
+\end{bmatrix}.
+\end{equation}
+It follows that $(1,0)$ is an unstable fixed point
 and the trajectory starting here has slope $-1$ which is the direction
 of the unstable manifold. Moreover 
 \[
-\frac{d^{2}p}{dw^{2}}=\frac{\delta'(w)g(w)-\delta(w)g'(w)}{\rho g(w)^{2}}<0
+\frac{d^{2}p}{dw^{2}}=\frac{\delta'(w)g(w)-\delta(w)g'(w)}{\hat{\rho} g(w)^{2}}<0
 \]
-for $w\in(0,1)$ because of the assumptions we had on $g$ and $\delta$.
+for $w\in(0,1)$ because of the assumptions (\ref{eq:1st assumption}) we proposed on $g(w)$ and $\delta(w)$.
 It follows that the trajacory must remain below the line $p=1-w$.
 Assuming $g(w)$ and $\delta(w)$ are continuous, there must be a
 $w^{\dagger}\in(0,1)$ such that $\rho g(w^{\dagger})=\delta(w^{\dagger})$.

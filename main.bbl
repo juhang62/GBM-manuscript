@@ -1,145 +1,183 @@
+\providecommand{\href}[2]{#2}
+\providecommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
 \begin{thebibliography}{10}
 
 \bibitem{Canosa1973}
-Jose Canosa.
-\newblock {On a Nonlinear Diffusion Equation Describing Population Growth}.
-\newblock {\em IBM Journal of Research and Development}, 17(4):307--313, jul
-  1973.
+\newblock J.~Canosa,
+\newblock {On a Nonlinear Diffusion Equation Describing Population Growth},
+\newblock \emph{IBM Journal of Research and Development}, \textbf{17} (1973),
+  307--313,
+\newblock \urlprefix\url{http://ieeexplore.ieee.org/document/5391351/}.
 
 \bibitem{Dunbar1983}
-StevenR. Dunbar.
-\newblock {Travelling wave solutions of diffusive Lotka-Volterra equations}.
-\newblock {\em Journal of Mathematical Biology}, 17(1):11--32, may 1983.
+\newblock S.~Dunbar,
+\newblock {Travelling wave solutions of diffusive Lotka-Volterra equations},
+\newblock \emph{Journal of Mathematical Biology}, \textbf{17} (1983), 11--32,
+\newblock \urlprefix\url{http://link.springer.com/10.1007/BF00276112}.
 
 \bibitem{Eikenberry2009}
-S.~E. Eikenberry, T.~Sankar, M.~C. Preul, E.~J. Kostelich, C.~J. Thalhauser,
-  and Y.~Kuang.
+\newblock S.~E. Eikenberry, T.~Sankar, M.~C. Preul, E.~J. Kostelich, C.~J.
+  Thalhauser and Y.~Kuang,
 \newblock {Virtual glioblastoma: Growth, migration and treatment in a
-  three-dimensional mathematical model}.
-\newblock {\em Cell Proliferation}, 42(4):511--528, 2009.
+  three-dimensional mathematical model},
+\newblock \emph{Cell Proliferation}, \textbf{42} (2009), 511--528.
 
 \bibitem{FISHER1937}
-R.~A. FISHER.
-\newblock {THE WAVE OF ADVANCE OF ADVANTAGEOUS GENES}.
-\newblock {\em Annals of Eugenics}, 7(4):355--369, jun 1937.
+\newblock R.~A. FISHER,
+\newblock {THE WAVE OF ADVANCE OF ADVANTAGEOUS GENES},
+\newblock \emph{Annals of Eugenics}, \textbf{7} (1937), 355--369,
+\newblock
+  \urlprefix\url{http://doi.wiley.com/10.1111/j.1469-1809.1937.tb02153.x}.
 
 \bibitem{Gerlee2016}
-Philip Gerlee and Sven Nelander.
+\newblock P.~Gerlee and S.~Nelander,
 \newblock {Travelling wave analysis of a mathematical model of glioblastoma
-  growth}.
-\newblock {\em Mathematical Biosciences}, 276:75--81, jun 2016.
+  growth},
+\newblock \emph{Mathematical Biosciences}, \textbf{276} (2016), 75--81,
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/abs/pii/S0025556416000602?via{\%}3Dihub}.
 
 \bibitem{Harley2014}
-K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet, and M.~Wechselberger.
+\newblock K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet and
+  M.~Wechselberger,
 \newblock {Existence of Traveling Wave Solutions for a Model of Tumor
-  Invasion}.
-\newblock {\em SIAM Journal on Applied Dynamical Systems}, 13(1):366--396, jan
-  2014.
+  Invasion},
+\newblock \emph{SIAM Journal on Applied Dynamical Systems}, \textbf{13} (2014),
+  366--396,
+\newblock \urlprefix\url{http://epubs.siam.org/doi/10.1137/130923129}.
 
 \bibitem{Jackson2015a}
-Pamela~R. Jackson, Joseph Juliano, Andrea Hawkins-Daarud, Russell~C. Rockne,
-  and Kristin~R. Swanson.
+\newblock P.~R. Jackson, J.~Juliano, A.~Hawkins-Daarud, R.~C. Rockne and K.~R.
+  Swanson,
 \newblock {Patient-Specific Mathematical Neuro-Oncology: Using a Simple
-  Proliferation and Invasion Tumor Model to Inform Clinical Practice}.
-\newblock {\em Bulletin of Mathematical Biology}, 77(5):846--856, may 2015.
+  Proliferation and Invasion Tumor Model to Inform Clinical Practice},
+\newblock \emph{Bulletin of Mathematical Biology}, \textbf{77} (2015),
+  846--856,
+\newblock \urlprefix\url{http://link.springer.com/10.1007/s11538-015-0067-7}.
 
 \bibitem{Kim2017}
-Minsun Kim, Jakob Kotas, Jason Rockhill, Mark Phillips, Minsun Kim, Jakob
-  Kotas, Jason Rockhill, and Mark Phillips.
+\newblock M.~Kim, J.~Kotas, J.~Rockhill, M.~Phillips, M.~Kim, J.~Kotas,
+  J.~Rockhill and M.~Phillips,
 \newblock {A Feasibility Study of Personalized Prescription Schemes for
-  Glioblastoma Patients Using a Proliferation and Invasion Glioma Model}.
-\newblock {\em Cancers}, 9(12):51, may 2017.
+  Glioblastoma Patients Using a Proliferation and Invasion Glioma Model},
+\newblock \emph{Cancers}, \textbf{9} (2017), 51,
+\newblock \urlprefix\url{http://www.mdpi.com/2072-6694/9/5/51}.
 
 \bibitem{Kostelich2011}
-Eric~J Kostelich, Yang Kuang, Joshua~M McDaniel, Nina~Z Moore, Nikolay~L
-  Martirosyan, and Mark~C Preul.
+\newblock E.~J. Kostelich, Y.~Kuang, J.~M. McDaniel, N.~Z. Moore, N.~L.
+  Martirosyan and M.~C. Preul,
 \newblock {Accurate state estimation from uncertain data and models: an
   application of data assimilation to mathematical models of human brain
-  tumors}.
-\newblock {\em Biology Direct}, 6(1):64, dec 2011.
+  tumors},
+\newblock \emph{Biology Direct}, \textbf{6} (2011), 64,
+\newblock
+  \urlprefix\url{http://biologydirect.biomedcentral.com/articles/10.1186/1745-6150-6-64}.
 
 \bibitem{Kuang}
-Yang Kuang, John~D. Nagy, and Stephen~E. Eikenberry.
-\newblock {\em {Introduction to mathematical oncology}}.
+\newblock Y.~Kuang, J.~D. Nagy and S.~E. Eikenberry,
+\newblock \emph{{Introduction to mathematical oncology}},
 \newblock Chapman and Hall/CRC.
 
 \bibitem{Madzvamuse2017}
-Anotida Madzvamuse, Raquel Barreira, and Alf Gerisch.
+\newblock A.~Madzvamuse, R.~Barreira and A.~Gerisch,
 \newblock {Cross-Diffusion in Reaction-Diffusion Models: Analysis, Numerics,
-  and Applications}.
-\newblock pages 385--392. Springer, Cham, 2017.
+  and Applications},
+\newblock Springer, Cham, 2017,
+\newblock 385--392,
+\newblock
+  \urlprefix\url{http://link.springer.com/10.1007/978-3-319-63082-3{\_}61}.
 
 \bibitem{GBMreview}
-Nikolay~L. Martirosyan, Erica~M. Rutter, Wyatt~L. Ramey, Eric~J. Kostelich,
-  Yang Kuang, and Mark~C. Preul.
+\newblock N.~L. Martirosyan, E.~M. Rutter, W.~L. Ramey, E.~J. Kostelich,
+  Y.~Kuang and M.~C. Preul,
 \newblock {Mathematically modeling the biological properties of gliomas: A
-  review}.
-\newblock {\em Mathematical Biosciences and Engineering}, 12(4):879--905, apr
-  2015.
+  review},
+\newblock \emph{Mathematical Biosciences and Engineering}, \textbf{12} (2015),
+  879--905,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/25974347
+  http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
 
 \bibitem{McDaniel2013}
-Joshua McDaniel, Eric Kostelich, Yang Kuang, John Nagy, Mark~C. Preul, Nina~Z.
-  Moore, and Nikolay~L. Matirosyan.
-\newblock {Data Assimilation in Brain Tumor Models}.
-\newblock pages 233--262. Springer, New York, NY, 2013.
+\newblock J.~McDaniel, E.~Kostelich, Y.~Kuang, J.~Nagy, M.~C. Preul, N.~Z.
+  Moore and N.~L. Matirosyan,
+\newblock {Data Assimilation in Brain Tumor Models},
+\newblock Springer, New York, NY, 2013,
+\newblock 233--262,
+\newblock
+  \urlprefix\url{http://link.springer.com/10.1007/978-1-4614-4178-6{\_}9}.
 
 \bibitem{Neal2013}
-Maxwell~Lewis Neal, Andrew~D. Trister, Tyler Cloke, Rita Sodt, Sunyoung Ahn,
-  Anne~L. Baldock, Carly~A. Bridge, Albert Lai, Timothy~F. Cloughesy, Maciej~M.
-  Mrugala, Jason~K. Rockhill, Russell~C. Rockne, and Kristin~R. Swanson.
+\newblock M.~L. Neal, A.~D. Trister, T.~Cloke, R.~Sodt, S.~Ahn, A.~L. Baldock,
+  C.~A. Bridge, A.~Lai, T.~F. Cloughesy, M.~M. Mrugala, J.~K. Rockhill, R.~C.
+  Rockne and K.~R. Swanson,
 \newblock {Discriminating Survival Outcomes in Patients with Glioblastoma Using
-  a Simulation-Based, Patient-Specific Response Metric}.
-\newblock {\em PLoS ONE}, 8(1):e51951, jan 2013.
+  a Simulation-Based, Patient-Specific Response Metric},
+\newblock \emph{PLoS ONE}, \textbf{8} (2013), e51951,
+\newblock \urlprefix\url{https://dx.plos.org/10.1371/journal.pone.0051951}.
 
 \bibitem{Norden2006}
-Andrew~D Norden and Patrick~Y Wen.
-\newblock {Glioma therapy in adults}.
-\newblock {\em The neurologist}, 12(6):279--92, nov 2006.
+\newblock A.~D. Norden and P.~Y. Wen,
+\newblock {Glioma therapy in adults},
+\newblock \emph{The neurologist}, \textbf{12} (2006), 279--92,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/17122724}.
 
 \bibitem{Rutter2017}
-Erica~M Rutter, Tracy~L Stepien, Barrett~J Anderies, Jonathan~D Plasencia,
-  Eric~C Woolf, Adrienne~C Scheck, Gregory~H Turner, Qingwei Liu, David Frakes,
-  Vikram Kodibagkar, Yang Kuang, Mark~C Preul, and Eric~J Kostelich.
-\newblock {Mathematical Analysis of Glioma Growth in a Murine Model}.
-\newblock {\em Scientific reports}, 7(1):2508, 2017.
+\newblock E.~M. Rutter, T.~L. Stepien, B.~J. Anderies, J.~D. Plasencia, E.~C.
+  Woolf, A.~C. Scheck, G.~H. Turner, Q.~Liu, D.~Frakes, V.~Kodibagkar,
+  Y.~Kuang, M.~C. Preul and E.~J. Kostelich,
+\newblock {Mathematical Analysis of Glioma Growth in a Murine Model},
+\newblock \emph{Scientific reports}, \textbf{7} (2017), 2508,
+\newblock
+  \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/28566701{\%}5Cnhttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC5451439}.
 
 \bibitem{Sherratt2000}
-Jonathan~A. Sherratt.
+\newblock J.~A. Sherratt,
 \newblock {Wavefront propagation in a competition equation with a new motility
-  term modelling contact inhibition between cell populations}.
-\newblock {\em Proceedings of the Royal Society of London. Series A:
-  Mathematical, Physical and Engineering Sciences}, 456(2002):2365--2386, oct
-  2000.
+  term modelling contact inhibition between cell populations},
+\newblock \emph{Proceedings of the Royal Society of London. Series A:
+  Mathematical, Physical and Engineering Sciences}, \textbf{456} (2000),
+  2365--2386,
+\newblock
+  \urlprefix\url{http://www.royalsocietypublishing.org/doi/10.1098/rspa.2000.0616}.
 
 \bibitem{Sherratt2001}
-Jonathan~A. Sherratt and Mark~A.J. Chaplain.
-\newblock {A new mathematical model for avascular tumour growth}.
-\newblock {\em Journal of Mathematical Biology}, 43(4):291--312, oct 2001.
+\newblock J.~A. Sherratt and M.~A. Chaplain,
+\newblock {A new mathematical model for avascular tumour growth},
+\newblock \emph{Journal of Mathematical Biology}, \textbf{43} (2001), 291--312,
+\newblock \urlprefix\url{http://link.springer.com/10.1007/s002850100088}.
 
 \bibitem{Stepien2015a}
-Tracy~L Stepien, Erica~M Rutter, and Yang Kuang.
+\newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
 \newblock {A data-motivated density-dependent diffusion model of in vitro
-  glioblastoma growth.}
-\newblock {\em Mathematical biosciences and engineering : MBE}, 12(6):1157--72,
-  dec 2015.
+  glioblastoma growth.},
+\newblock \emph{Mathematical biosciences and engineering : MBE}, \textbf{12}
+  (2015), 1157--72,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/26775861}.
 
 \bibitem{Stepien2018}
-Tracy~L. Stepien, Erica~M. Rutter, and Yang Kuang.
-\newblock {Traveling Waves of a Go-or-Grow Model of Glioma Growth}.
-\newblock {\em SIAM Journal on Applied Mathematics}, 78(3):1778--1801, jan
-  2018.
+\newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
+\newblock {Traveling Waves of a Go-or-Grow Model of Glioma Growth},
+\newblock \emph{SIAM Journal on Applied Mathematics}, \textbf{78} (2018),
+  1778--1801,
+\newblock \urlprefix\url{https://epubs.siam.org/doi/10.1137/17M1146257}.
 
 \bibitem{Swanson2011}
-K.~R. Swanson, R.~C. Rockne, J.~Claridge, M.~A. Chaplain, E.~C. Alvord, and
-  A.~R.~A. Anderson.
+\newblock K.~R. Swanson, R.~C. Rockne, J.~Claridge, M.~A. Chaplain, E.~C.
+  Alvord and A.~R.~A. Anderson,
 \newblock {Quantifying the Role of Angiogenesis in Malignant Progression of
-  Gliomas: In Silico Modeling Integrates Imaging and Histology}.
-\newblock {\em Cancer Research}, 71(24):7366--7375, dec 2011.
+  Gliomas: In Silico Modeling Integrates Imaging and Histology},
+\newblock \emph{Cancer Research}, \textbf{71} (2011), 7366--7375,
+\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/21900399
+  http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC3398690
+  http://cancerres.aacrjournals.org/cgi/doi/10.1158/0008-5472.CAN-11-1399}.
 
 \bibitem{Swanson2008}
-K~R Swanson, R~C Rostomily, and E~C Alvord.
+\newblock K.~R. Swanson, R.~C. Rostomily and E.~C. Alvord,
 \newblock {A mathematical modelling tool for predicting survival of individual
-  patients following resection of glioblastoma: a proof of principle}.
-\newblock {\em British Journal of Cancer}, 98(1):113--119, jan 2008.
+  patients following resection of glioblastoma: a proof of principle},
+\newblock \emph{British Journal of Cancer}, \textbf{98} (2008), 113--119,
+\newblock \urlprefix\url{http://www.nature.com/articles/6604125}.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  14 MAR 2019 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.13)  28 MAR 2019 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -555,42 +555,40 @@ LaTeX Info: Redefining \nameref on input line 24.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+txsya on input line 65.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 62.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 65.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 65.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 65.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <8> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 71.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 66.
 Missing character: There is no â in font txr!
 Missing character: There is no € in font txr!
 Missing character: There is no ™ in font txr!
 
-<logo.pdf, id=39, 372.19049pt x 74.43811pt>
+<logo.pdf, id=33, 372.19049pt x 74.43811pt>
 File: logo.pdf Graphic file (type pdf)
  <use logo.pdf>
-Package pdftex.def Info: logo.pdf used on input line 94.
+Package pdftex.def Info: logo.pdf used on input line 89.
 (pdftex.def)             Requested size: 195.7521pt x 39.14986pt.
 
 Overfull \vbox (74.84523pt too high) has occurred while \output is active []
@@ -599,6 +597,9 @@ Overfull \vbox (74.84523pt too high) has occurred while \output is active []
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logo.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
@@ -606,148 +607,253 @@ Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
-[3] <"uw plane dashed".png, id=115, 955.31906pt x 572.1375pt>
-File: "uw plane dashed".png Graphic file (type png)
-
-<use "uw plane dashed".png>
-Package pdftex.def Info: "uw plane dashed".png used on input line 268.
-(pdftex.def)             Requested size: 334.36668pt x 200.25111pt.
-
+[3]
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [4]
+Package epstopdf Info: Source file: <plots/pp.eps>
+(epstopdf)                    date: 2019-03-28 16:22:49
+(epstopdf)                    size: 113988 bytes
+(epstopdf)             Output file: <plots/pp-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-28 16:24:43
+(epstopdf)                    size: 14430 bytes
+(epstopdf)             Command: <repstopdf --outfile=plots/pp-eps-converted-to.
+pdf plots/pp.eps>
+(epstopdf)             \includegraphics on input line 281.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./plots/pp-eps-converted-to.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<plots/pp-eps-converted-to.pdf, id=122, 736.7525pt x 392.46625pt>
+File: plots/pp-eps-converted-to.pdf Graphic file (type pdf)
+
+<use plots/pp-eps-converted-to.pdf>
+Package pdftex.def Info: plots/pp-eps-converted-to.pdf used on input line 281.
+(pdftex.def)             Requested size: 478.88345pt x 255.10002pt.
+
 Overfull \vbox (4.825pt too high) has occurred while \output is active []
 
- [5 <./uw plane dashed.png>] <plots/Fig2.JPG, id=148, 1090.0725pt x 549.05125pt
->
-File: plots/Fig2.JPG Graphic file (type jpg)
-
-<use plots/Fig2.JPG>
-Package pdftex.def Info: plots/Fig2.JPG used on input line 362.
-(pdftex.def)             Requested size: 327.02428pt x 164.71664pt.
-
+ [5 <./plots/pp-eps-converted-to.pdf>]
 Overfull \vbox (4.825pt too high) has occurred while \output is active []
 
  [6]
+Package epstopdf Info: Source file: <plots/waveprofile.eps>
+(epstopdf)                    date: 2019-03-28 19:31:07
+(epstopdf)                    size: 53339 bytes
+(epstopdf)             Output file: <plots/waveprofile-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-28 19:32:04
+(epstopdf)                    size: 10803 bytes
+(epstopdf)             Command: <repstopdf --outfile=plots/waveprofile-eps-conv
+erted-to.pdf plots/waveprofile.eps>
+(epstopdf)             \includegraphics on input line 356.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./plots/waveprofile-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<plots/waveprofile-eps-converted-to.pdf, id=158, 421.575pt x 316.18124pt>
+File: plots/waveprofile-eps-converted-to.pdf Graphic file (type pdf)
+
+<use plots/waveprofile-eps-converted-to.pdf>
+Package pdftex.def Info: plots/waveprofile-eps-converted-to.pdf used on input l
+ine 356.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+
+<plots/MR.png, id=159, 388.45125pt x 511.9125pt>
+File: plots/MR.png Graphic file (type png)
+ <use plots/MR.png>
+Package pdftex.def Info: plots/MR.png used on input line 356.
+(pdftex.def)             Requested size: 128.1893pt x 168.93164pt.
+
+Overfull \vbox (4.68999pt too high) has occurred while \output is active []
+
+
+[7 <./plots/waveprofile-eps-converted-to.pdf> <./plots/MR.png>]
 
 pdfTeX warning: pdflatex (file ./plots/frhok/betas-new.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<plots/frhok/betas-new.pdf, id=159, 427.5975pt x 319.1925pt>
+<plots/frhok/betas-new.pdf, id=179, 427.5975pt x 319.1925pt>
 File: plots/frhok/betas-new.pdf Graphic file (type pdf)
 
 <use plots/frhok/betas-new.pdf>
-Package pdftex.def Info: plots/frhok/betas-new.pdf used on input line 408.
+Package pdftex.def Info: plots/frhok/betas-new.pdf used on input line 401.
 (pdftex.def)             Requested size: 213.79822pt x 159.59586pt.
 
 
 pdfTeX warning: pdflatex (file ./plots/frhok/frhok-new.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<plots/frhok/frhok-new.pdf, id=160, 421.575pt x 316.18124pt>
+<plots/frhok/frhok-new.pdf, id=180, 421.575pt x 316.18124pt>
 File: plots/frhok/frhok-new.pdf Graphic file (type pdf)
 
 <use plots/frhok/frhok-new.pdf>
-Package pdftex.def Info: plots/frhok/frhok-new.pdf used on input line 408.
+Package pdftex.def Info: plots/frhok/frhok-new.pdf used on input line 401.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (4.68999pt too high) has occurred while \output is active []
-
-
-[7 <./plots/Fig2.JPG> <./plots/frhok/betas-new.pdf> <./plots/frhok/frhok-new.pd
-f>]
 
 pdfTeX warning: pdflatex (file ./plots/scatterplot-new.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<plots/scatterplot-new.pdf, id=178, 515.9275pt x 497.86pt>
+<plots/scatterplot-new.pdf, id=183, 515.9275pt x 497.86pt>
 File: plots/scatterplot-new.pdf Graphic file (type pdf)
 
 <use plots/scatterplot-new.pdf>
-Package pdftex.def Info: plots/scatterplot-new.pdf used on input line 466.
+Package pdftex.def Info: plots/scatterplot-new.pdf used on input line 431.
 (pdftex.def)             Requested size: 361.14679pt x 348.49962pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
-[8 <./plots/scatterplot-new.pdf>]
+[8 <./plots/frhok/betas-new.pdf> <./plots/frhok/frhok-new.pdf>]
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
-[9]
+[9 <./plots/scatterplot-new.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 518--521
+
+ []
+
+
+Underfull \vbox (badness 4726) has occurred while \output is active []
+
+
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [10]
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 538
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 3312) in paragraph at lines 619--627
+[] \OT1/txr/m/n/12 N. L. Mar-tirosyan, E. M. Rut-ter, W. L. Ramey, E. J. Kostel
+ich, Y. Kuang and
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 619--627
+\OT1/txr/m/n/12 M. C. Preul,  Math-e-mat-i-cally mod-el-ing the bi-o-log-i-cal 
+prop-er-ties of gliomas: A re-
+ []
+
+
+Underfull \hbox (badness 6461) in paragraph at lines 619--627
+\OT1/txr/m/n/12 view,  \OT1/txr/m/it/12 Math-e-mat-i-cal Bio-sciences and En-gi
+-neer-ing\OT1/txr/m/n/12 , \OT1/txr/bx/n/12 12 \OT1/txr/m/n/12 (2015), 879--905
+,  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--627
+[][]$\OT1/txtt/m/n/12 http : / / www . ncbi . nlm . nih . gov / pubmed / 259743
+47http : / / www . aimsciences . org /
+ []
+
+
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [11]
-
-pdfTeX warning: pdflatex (file ./logobottom.pdf): PDF inclusion: found PDF vers
-ion <1.6>, but at most version <1.5> allowed
-<logobottom.pdf, id=226, 266.20453pt x 76.19467pt>
-File: logobottom.pdf Graphic file (type pdf)
- <use logobottom.pdf>
-Package pdftex.def Info: logobottom.pdf used on input line 726.
-(pdftex.def)             Requested size: 132.13513pt x 37.82053pt.
-
-Underfull \hbox (badness 4779) in paragraph at lines 726--726
-[][]\OT1/txr/m/n/12 2019 the Au-thor(s), li-censee AIMS Press. This
+Underfull \hbox (badness 1953) in paragraph at lines 653--660
+[] \OT1/txr/m/n/12 E. M. Rut-ter, T. L. Stepien, B. J. An-deries, J. D. Plasen-
+cia, E. C. Woolf, A. C.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--726
-\OT1/txr/m/n/12 is an open ac-cess ar-ti-cle dis-tributed un-der the
+Underfull \hbox (badness 3209) in paragraph at lines 693--701
+[] \OT1/txr/m/n/12 K. R. Swan-son, R. C. Rockne, J. Clar-idge, M. A. Chap-lain,
+ E. C. Alvord and
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 726--726
-\OT1/txr/m/n/12 terms of the Cre-ative Com-mons At-tri-bu-tion Li-cense
+Underfull \hbox (badness 1389) in paragraph at lines 693--701
+\OT1/txr/m/n/12 Gliomas: In Sil-ico Mod-el-ing In-te-grates Imag-ing and His-to
+l-ogy,  \OT1/txr/m/it/12 Can-cer Re-search\OT1/txr/m/n/12 , \OT1/txr/bx/n/12 71
+
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 726.
+
+Underfull \hbox (badness 5771) in paragraph at lines 693--701
+\OT1/txr/m/n/12 (2011), 7366--7375,  URL [][]$\OT1/txtt/m/n/12 http : / / www .
+ ncbi . nlm . nih . gov / pubmed / 21900399http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--701
+\OT1/txtt/m/n/12 / / www . pubmedcentral . nih . gov / articlerender . fcgi ? a
+rtid = PMC3398690http :
+ []
+
+
+Underfull \vbox (badness 4181) has occurred while \output is active []
+
 
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
-[12 <./logobottom.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 726.
+[12]
+
+pdfTeX warning: pdflatex (file ./logobottom.pdf): PDF inclusion: found PDF vers
+ion <1.6>, but at most version <1.5> allowed
+<logobottom.pdf, id=280, 266.20453pt x 76.19467pt>
+File: logobottom.pdf Graphic file (type pdf)
+ <use logobottom.pdf>
+Package pdftex.def Info: logobottom.pdf used on input line 741.
+(pdftex.def)             Requested size: 132.13513pt x 37.82053pt.
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 741.
+
+Underfull \hbox (badness 4779) in paragraph at lines 741--741
+[][]\OT1/txr/m/n/12 2019 the Au-thor(s), li-censee AIMS Press. This
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+\OT1/txr/m/n/12 is an open ac-cess ar-ti-cle dis-tributed un-der the
+ []
+
+
+Underfull \hbox (badness 6927) in paragraph at lines 741--741
+\OT1/txr/m/n/12 terms of the Cre-ative Com-mons At-tri-bu-tion Li-cense
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 741.
+
+Overfull \vbox (4.68999pt too high) has occurred while \output is active []
+
+
+[13 <./logobottom.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 741.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 726.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 726.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 741.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 741.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 4AF8F12ECB558B531970F30D56F4B59F;393.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 726.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 741.
  ) 
 Here is how much of TeX's memory you used:
- 8875 strings out of 494953
- 128540 string characters out of 6180976
- 224516 words of memory out of 5000000
- 11949 multiletter control sequences out of 15000+600000
- 45859 words of font info for 119 fonts, out of 8000000 for 9000
+ 8895 strings out of 494953
+ 128900 string characters out of 6180976
+ 225326 words of memory out of 5000000
+ 11961 multiletter control sequences out of 15000+600000
+ 39517 words of font info for 100 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 43i,17n,40p,442b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
-ts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on main.pdf (12 pages, 876229 bytes).
+ 43i,17n,40p,576b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on main.pdf (13 pages, 742758 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
