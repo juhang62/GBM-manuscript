@@ -260,8 +260,8 @@ of $p$ and $w$, we obtain the following reduced system
 
 \begin{subequations}\label{eq:pp system}
 \begin{align}
-\frac{dp}{dz} & =p(\hat{\rho}g(w)-\delta(w)),\label{eq:dpdz}\\
-\frac{dw}{dz} & =-\hat{\rho}pg(w),\label{eq:dwdz}
+\frac{dw}{dz} & =-\hat{\rho}pg(w),\label{eq:dwdz}\\
+\frac{dp}{dz} & =p(\hat{\rho}g(w)-\delta(w)),\label{eq:dpdz}
 \end{align}
 \end{subequations}which is amenable to phase plane analysis. The
 approximate wave solution corresponds to a trajectory that leaves
@@ -714,26 +714,25 @@ by an grant from Arizona Biomedical Research Center. \\
 We perform phase plane ($w$-$p$ plane, see Figure \ref{fig:pp}) analysis of (\ref{eq:pp system})
 to show the existence of a trajectory that starts from $(1,0)$ and
 ends at $(w^{*},0)$ where $w^{*}\ge0$ if (\ref{eq:1st assumption})
-are satisfied. The Jacobian matrix at (0,1) is 
+are satisfied. The Jacobian matrix at (1,0) is 
 \begin{equation}
 \begin{bmatrix}
-\hat{\rho} & 0\\
--\hat{\rho} & 0
+ & 0 & -\hat{\rho}\\
+ & 0 & \hat{\rho}
 \end{bmatrix}.
 \end{equation}
 It follows that $(1,0)$ is an unstable fixed point
 and the trajectory starting here has slope $-1$ which is the direction
-of the unstable manifold. Moreover 
-\[
+of the unstable manifold. We also note that 
+\begin{equation}\label{eq:dpdw2}
 \frac{d^{2}p}{dw^{2}}=\frac{\delta'(w)g(w)-\delta(w)g'(w)}{\hat{\rho} g(w)^{2}}<0
-\]
+\end{equation}
 for $w\in(0,1)$ because of the assumptions (\ref{eq:1st assumption}) we proposed on $g(w)$ and $\delta(w)$.
-It follows that the trajacory must remain below the line $p=1-w$.
+(\ref{eq:dpdw2}) ensures that the trajectory must remain below the line $p=1-w$ and that there is no periodic solutions. Moreover, since $\frac{dw}{dz}\vert_{w=0}=0$, the trajectory cannot cross $p$-axis. 
 Assuming $g(w)$ and $\delta(w)$ are continuous, there must be a
 $w^{\dagger}\in(0,1)$ such that $\rho g(w^{\dagger})=\delta(w^{\dagger})$.
 For $w>w^{\dagger}$, the trajectory has positive slope and hence
-heading down to the $w$-axis. Since $\frac{dw}{dz}\vert_{w=0}=0$,
-the trajectory cannot cross $p$-axis. Thus it must intersect the
-$w$-axis at some pont $w^{*}\in(0,w^{\dagger}).$ 
+heading down to the $w$-axis.  Thus it must intersect the
+$w$-axis at some point $w^{*}\in(0,w^{\dagger}).$ 
 
 \end{document}
