@@ -273,7 +273,7 @@ is shown in the appendix. Dividing (\ref{eq:dpdz}) by (\ref{eq:dwdz}) yields
 \frac{dp}{dw}=\frac{\delta(w)}{\hat{\rho}g(w)}-1.
 \end{equation}
 
- Upon integration we get $p$ as a function of $w$, i.e., $p=p(w)$,
+Upon integration we get $p$ as a function of $w$, i.e., $p=p(w)$,
 which we will make use of in the next section. 
 
 \begin{figure}
@@ -307,11 +307,10 @@ rim width (in dimensional form) is computed as below
 
 \begin{subequations}
 \begin{eqnarray}
-\ell_{1} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw\label{eq:l1}\\
+\ell_{1} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw,\label{eq:l1}\\
 \ell_{2} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{+}}^{w_{2}}\frac{dz}{dw}dw,\label{eq:l2}
 \end{eqnarray}
 \end{subequations}
-
 where $w_{1}^{\pm}$ and $w_{2}$ satisfy $p(w_{1}^{\pm})=a_{1}p_{\text{max}},p(w_{2})=a_{2}p_{\max}$ with $p(w)$ resulted from integration of (\ref{eq:dpdw}). Additionally, model-derived wave
 speed $c=2\sqrt{\rho D}$ can be matched with image-derived speed
 $V$. Thus we have three nonlinear equations 
@@ -374,7 +373,7 @@ monotonicity of $f(\cdot$) is well preserved (right pane of Figure
 \ref{fig:beta =000026 f}). As we can see, the sigmoid shaped $g(w)$
 and $\delta(w)$ give larger range of $f(\cdot)$ and thus more flexibility
 in parameter estimation. Moreover, sigmoid curves are believed to
-be biological relevant (most enzymatic reaction rates have the same
+be biologically relevant (most enzymatic reaction rates have the same
 shape with respect to reactant concentration). Therefore, we focus
 on this choice and move on to find patient specific parameters using
 their MR images. 
@@ -475,8 +474,8 @@ and studies on this topic date back to \cite{FISHER1937}. Rigorous
 proof of existence of traveling wave solution in a reaction-diffusion
 system often leads to phase space analysis such as in \cite{Dunbar1983}.
 Not only the high dimension but also the singularity represented in
-the cross diffusion makes a proof a changeling task, which will the
-the focus of future work. Nevertheless, the reduced system is reconcilable
+the cross diffusion makes any rigorous proof a daunting task. Nevertheless, 
+the reduced system is amenable
 to phase plane analysis and the orbit representing the traveling wave
 solution can be identified (see appendix). 
 
@@ -485,31 +484,30 @@ which only tracks net proliferation, our model treats birth and death
 separately, making it possible to gauge the underlying total proliferation
 of cancer cells. This is valuable information for personalized treatment
 design since most chemotherapy and radiotherapy target proliferating
-cells. Moreover, the structural information is also potential useful,
-e.g., it may instruct drug dose so that the drug can perfuse through
+cells. Moreover, the structural information is also potentially useful,
+e.g., it may help deciding drug dose so that the drug can perfuse through
 the width of the proliferating rim. Research along this line has been
-conducted using the PI model \cite{Kim2017}. We plan to investigate
-along this line using our model in the future study. 
+conducted using the PI model \cite{Kim2017}. 
 
-We recognize the possibility that the tumor is evolving over its course
-of growth as the observed tumor profile at two different times is
-not scale invariant. We suspect that the parameters of the model are
-not constant over time. In this paper, we devise a method which uses
+We recognize the fact that the cancer is constantly evolving over its course
+of growth and the observed cancer profile at two different times is
+not scale invariant. We understand that the parameters of the model may
+not stay constant over time. In this paper, we devise a method which uses
 two MR images taken at two consecutive times before surgery, and our
 method is feasible whether the two scans are consistent with invariant
-tumor profile or not. It is straightforward to extend the current
+cancer profile or not. It is straightforward to extend the current
 method to make use of MR images taken at three or even more time points.
 By updating parameters as more data is acquired, we are essentially
 doing data assimilation. There has been research on applying full-fledged
 data assimilation to cancer modeling \cite{Kostelich2011,McDaniel2013}.
-Our method stands out being simple and computationally light-weighted.
-In the case when only one per-surgery MR scan is available, we demonstrated
-a way to estimate parameters involving mild and experimentally verifiable
-assumptions. The major contributions of this paper is the novel way
-to make use of scarce data which are the routinely available in clinical
-settings. So we hope our method would offer wide and practical use
+Our method stands out being mathematically intuitive and computationally 
+straightforward. In the case when only one pre-surgery MR scan is available, we 
+present a way to estimate parameters involving natural and experimentally verifiable
+assumptions. The major contributions of this paper is presenting two novel ways
+of making use of scarce data which are routinely available in clinical
+settings. So we hope our method would find wide and practical applications
 compared to large-scale computational models \cite{Eikenberry2009,Rutter2017},
-which often focus on experimental data. 
+which often focus on fitting experimental data sets that include many data points. 
 
 
 %\section{Conclusion}
