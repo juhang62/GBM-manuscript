@@ -196,7 +196,7 @@ rate at maximum growth factor be $\rho$
 and death rate at zero growth factor
 be $k$, i.e., $\tilde{g}(1,\rho)=\rho,\ \tilde{\delta}(0;k)=k$.
 For reasons that will become clear later, we pick the functional form
-which can be written as $\tilde{g}(w;\rho)=\rho g(w)$ and $\tilde{\delta}(w;k)=k\delta(w)$.
+which can be written as $\tilde{g}(w;\rho)=\rho g(w)$ and $\tilde{\delta}(w;k)=k\delta(w)$. Some examples of $g(w)$ and $\delta(w)$ include the cumulative distribution function of beta distribution family (see left pane of Figure \ref{fig:beta =000026 f}).
 Although we have stated several additional assumptions, it should
 be noted that they impose little impact on the generality and flexibility
 of our model. The benefit of including them will become clear in the
@@ -363,16 +363,15 @@ can solve for the three unknown parameters.
 \section{Results}
 We first investigate the monotonicity of $f(\cdot)$ for some specific
 choice of $g(w)$ and $\delta(w)$ because it is crucial for parameter
-identifiability. Given our restrictions on $g(w)$ and $\delta(w)$,
-the cumulative density function (cdf) of Beta distribution family
-suits our purposes ($\delta(w)=1-cdf(w)$). By tweeting the scale
-and shape of beta distribution we can get linear, sigmoid and concave
+identifiability. Given our restrictions (\ref{eq:1st assumption}) on $g(w)$ and $\delta(w)$,
+the cumulative distribution function of Beta distribution family
+suits our purposes. Therefore, we let $g(w)=B(w;\alpha_g,\beta_g)$ and $\delta(w)=1-B(w;\alpha_{\delta},\beta_{\delta}$, where $B(w; \alpha, \beta)$ is the cdf of Beta distribution with shape parameters $\alpha$ and $\beta$. By tweeting $\alpha$ and $\beta$, we can get linear, sigmoid and concave
 up/down curves (see left pane of Figure \ref{fig:beta =000026 f}).
 It turns out that our framework is very robust to those choices, i.e.,
 monotonicity of $f(\cdot$) is well preserved (right pane of Figure
-\ref{fig:beta =000026 f}). As we can see, the sigmoid shaped $g(w)$
-and $\delta(w)$ give larger range of $f(\cdot)$ and thus more flexibility
-in parameter estimation. Moreover, sigmoid curves are believed to
+\ref{fig:beta =000026 f}). As we can see, choosing $g(w)=B(w;2,2)$
+and $\delta(w)=B(w;1,3)$ gives larger range of $f(\cdot)$ and thus more flexibility
+in parameter estimation. Moreover, the sigmoid curves given by this choice are believed to
 be biologically relevant (most enzymatic reaction rates have the same
 shape with respect to reactant concentration). Therefore, we focus
 on this choice and move on to find patient specific parameters using
@@ -405,10 +404,9 @@ monotonicity of $f(\cdot)$ given different choices of $g(w)$ and $\delta(w)$ as 
 
 \begin{table}[H]
 \begin{center}
-\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived
-from T1 and T2 images and their corresponding estimated parameters.}
+\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived from T1 and T2 images and the corresponding vital parameters estimated by our protocol. We have preset $a_1=0.9, a_2=0.1$, $r_0=0.21$ mm and $t^*=30$ days, which are adapted from numbers found in the literature \cite{Swanson2008, Stepien2015a}, and based on experimentally verifiable hypotheses.}
 \begin{tabular}{ccccccc} \hline
-Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2} $s$^{-1}$ & $\rho$, s$^{-1}$ & $k$, s$^{-1}$\\ \hline
+Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2}$ day$^{-1}$ & $\rho$, day$^{-1}$ & $k$, day$^{-1}$\\ \hline
 
 1 & 14.87 & 15.24 & 15.83 & 0.2873 & 0.0529 & 0.0152 \\
 2 & 20.73 & 22.87 & 20.35 & 0.9009 & 0.0462 & 0.0623 \\
