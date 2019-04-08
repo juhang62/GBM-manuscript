@@ -248,7 +248,7 @@ rim width (in dimensional form) is computed as below
 \begin{subequations}
 \begin{eqnarray}
 \ell_{1} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw,\label{eq:l1}\\
-\ell_{2} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{1}^{+}}^{w_{2}}\frac{dz}{dw}dw,\label{eq:l2}
+\ell_{2} & = & \frac{\sqrt{D\rho}}{k}\int_{w_{2}}^{w_{1}^{-}}\frac{dz}{dw}dw,\label{eq:l2}
 \end{eqnarray}
 \end{subequations}
 where $w_{1}^{\pm}$ and $w_{2}$ satisfy $p(w_{1}^{\pm})=a_{1}p_{\text{max}},p(w_{2})=a_{2}p_{\max}$ with $p(w)$ resulted from integration of (\ref{eq:dpdw}). Additionally, model-derived wave
@@ -261,7 +261,7 @@ from which we hope to find parameters $D,\rho$ and $k$. Due
 to the assumptions we made before, we can simply take the ratio of
 (\ref{eq:l1}) and (\ref{eq:l2}), which gives
 \begin{equation}
-f(\hat{\rho})\equiv\frac{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}{\int_{w_{1}^{+}}^{w_{2}}\frac{dz}{dw}dw}=\frac{L_{1}}{L_{2}},\label{eq:f(rho/k)}
+f(\hat{\rho})\equiv\frac{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}{\int_{w_{2}}^{w_{1}^{-}}\frac{dz}{dw}dw}=\frac{L_{1}}{L_{2}},\label{eq:f(rho/k)}
 \end{equation}
 where we note that the integrals are functions of $\hat{\rho}$. Observe that (\ref{eq:f(rho/k)})
 can be solved for $\hat{\rho}$ analytically in special cases or numerically
