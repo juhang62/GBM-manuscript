@@ -31,8 +31,8 @@
   Steffen Eikenberry\affil{1},
   Changhan He\affil{1},
   Lauren Johnson\affil{1},
-  Mark Preul\affil{2},
-  Eric Kostelich \affil{1},
+  Mark C. Preul\affil{2},
+  Eric J. Kostelich \affil{1},
   and
   Yang Kuang\affil{1,} \corrauth
 }
@@ -42,7 +42,7 @@
 
 \address{%
   \addr{\affilnum{1}}{School of Mathematical and Statistical Sciences, Arizona State University, Tempe, AZ 85287, USA}
-  \addr{\affilnum{2}}{Department of Neurosurgery Research, Barrow Neurological Institute, St. Joseph’s Hospital and Medical Center, Phoenix, AZ 85013, USA}}
+  \addr{\affilnum{2}}{Department of Neurosurgery, Barrow Neurological Institute, St. Joseph’s Hospital and Medical Center, Phoenix, AZ 85013, USA}}
 
 % corresponding author
 \corraddr{kuang@asu.edu}
@@ -80,7 +80,7 @@ However, models which confront the heterogeneity of GBM directly by utilizing sp
 where $c(x,t)$ is cancer cell density at location $x$ and time $t$, with $D$ the diffusion coefficient and $\rho$ the intrinsic tumor cell growth rate.  The model can yield a living tumor core and an advancing front, but cannot capture any heterogeneity between live and necrotic tumor cells.  While several modeling effort take into account a variety of proliferating, migrating, or necrotic cell components \cite{Eikenberry2009,Swanson2011}, they are usually too complicated to be parameterized to a single (or very limited number of) patient MRI series.  Thus, the motivation for this work is to extend the baseline PI model to include necrotic cells in a very simplified way, such that three idealized components of a GBM seen on imaging (described below) can be related to model parameters, and these parameters may be uniquely identified from just one or two MRIs.
 
 As above, MRI only indirectly shows cancers cells and GBMs are highly heterogeneous, but T1-weighted sequences often show a (partially) necrotic core region surrounded by a bright enhancing rim that correlates with high blood vessel density, and presumably, rapid cell proliferation. This core and
-rim is usually surrounded by a large expanse of edema that is best visualized on T2-weighted MRI, and may correspond to diffusely invasive, highly motile
+rim is usually surrounded by a large expanse of edema that is best visualized on T2-weighted MRI, and has been found to harbor and correspond with a component of diffusely invasive, highly motile
 GBM cells, as presumed in much of the work by Swanson et al. \cite{Swanson2008}.  Thus, we can extract, in the best case and approximating the tumor as a sphere, three \textit{idealized} digital marks from imaging: Necrotic radius, enhancing radius, and what we shall refer to as the T2 or maximum radius. We hypothesize that a relatively simple mathematical model framework may capture all these three digital marks, and thus yield insights into the relative contributions of cellular proliferation, motility, and necrosis to the observed image features.
 
 The paper is organized as following. We first describe our model and its assumptions.  We then demonstrate that the model has a traveling wave solution and present the approximate wave profile. We further devise a simple procedure to estimate patient-specific parameters by fitting the approximate
@@ -95,8 +95,8 @@ equations
 
 \begin{subequations}\label{eq:main3d}
 \begin{eqnarray}
-\pardiff pt & = & \nabla\cdot\bigg[\frac{Dp}{p+q}\nabla(p+q)\bigg]+\tilde{g}(w)p-\tilde{\delta}(w)p,\\
-\pardiff qt & = & \nabla\cdot\bigg[\frac{Dq}{p+q}\nabla(p+q)\bigg]+\tilde{\delta}(w)p,
+\pardiff pt & = & \nabla\cdot\bigg[\frac{Dp}{p+q}\nabla(p+q)\bigg]+\tilde{g}(w)p-\tilde{\delta}(w)p,\label{eq:main3d1}\\
+\pardiff qt & = & \nabla\cdot\bigg[\frac{Dq}{p+q}\nabla(p+q)\bigg]+\tilde{\delta}(w)p, \label{eq:main3d2}
 \end{eqnarray}
 \end{subequations}
 where
@@ -127,9 +127,7 @@ That is, birth (death) should increase (decrease) with availability of
 the growth factor, there is more birth than death at maximum growth
 factor, and there is only death with no growth in absence of growth
 factor. It is also assumed that the death rate is negligible at maximum
-growth factor. With these assumptions, it can be shown that the solution
-of (\ref{eq:main3d}) stay nonnegative and is bounded by $p+q\le1$
-for all $t$, supplemented with suitable initial condition.
+growth factor. With these assumptions, we observe numerically that with suitable initial conditions, the solution of (\ref{eq:main3d}) stays positive and is bounded ($p+q\le1$) for all $t$. 
 
 
 We can only estimate up to three parameters based on the three pieces of information
@@ -227,7 +225,7 @@ which we will make use of in the next section.
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.65]{plots/pp.eps}\caption{\label{fig:pp}A typical trajectory that connects (0,1) and $(0,w^*)$ in the phase plane. Given $\delta(w)$ and $g(w)$, this trajectory can be found by integrating (\ref{eq:dpdw}). This trajectory represents an approximate traveling wave solution and its existence under general assumptions is shown in supplemental material.}
+\includegraphics[scale=0.55]{plots/pp.eps}\caption{\label{fig:pp}A typical trajectory that connects (0,1) and $(0,w^*)$ in the phase plane. Given $\delta(w)$ and $g(w)$, this trajectory can be found by integrating (\ref{eq:dpdw}). This trajectory represents an approximate traveling wave solution and its existence under general assumptions is shown in the appendix.}
 \end{center}
 \end{figure}
 
@@ -259,13 +257,13 @@ $V$. Thus we have three nonlinear equations
 \begin{equation}
 \{\ell_{1}=L_{1},\ell_{2}=L_{2},c=V\},\label{eq:l1l2c}
 \end{equation}
- from which we hope to find parameters $D,\rho$ and $k$. Due
+from which we hope to find parameters $D,\rho$ and $k$. Due
 to the assumptions we made before, we can simply take the ratio of
 (\ref{eq:l1}) and (\ref{eq:l2}), which gives
 \begin{equation}
-f(\hat{\rho})\equiv\frac{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}=\frac{L_{1}}{L_{2}},\label{eq:f(rho/k)}
+f(\hat{\rho})\equiv\frac{\int_{w_{1}^{-}}^{w_{1}^{+}}\frac{dz}{dw}dw}{\int_{w_{1}^{+}}^{w_{2}}\frac{dz}{dw}dw}=\frac{L_{1}}{L_{2}},\label{eq:f(rho/k)}
 \end{equation}
-where we note that the integrals are a function of $\hat{\rho}$. (\ref{eq:f(rho/k)})
+where we note that the integrals are functions of $\hat{\rho}$. Observe that (\ref{eq:f(rho/k)})
 can be solved for $\hat{\rho}$ analytically in special cases or numerically
 in general. We note that the monotonicity of $f(\cdot)$ is important
 for identifiability of parameters. Once we find $\hat{\rho}$, i.e., the ratio $\rho /k$, all parameters can be found by back substitution.
@@ -273,7 +271,7 @@ for identifiability of parameters. Once we find $\hat{\rho}$, i.e., the ratio $\
 The above method requires two MR scans taken at two consecutive times
 before surgery in order to obtain image-derived wave speed. If the
 second image is not available, another approximation can be made to
-rescue this situation. Generally, tumor age can be estimated by the
+deal with such a situation. Generally, tumor age can be estimated by the
 tumor radius divided by the wave speed. However, age estimation differs
 in terms of which radius (say $R_{1}$ or $R_{2}$) to use. This discrepancy
 can be explained by the common observation that tumor grows exponentially
@@ -288,20 +286,26 @@ exponential growth stage of T2 volume is negligible, we have
 \begin{eqnarray} \label{eq:age est}
 \frac{R_{1}-r_{0}(e^{\rho t^{*}})^{1/3}}{2\sqrt{\rho D}}+t^{*} & = & \frac{R_{2}}{2\sqrt{\rho D}},
 \end{eqnarray}
-by equating the two age estimations. Coming from the assumption of exponential growth of tumor volume, the term $r_{0}(e^{\rho t^{*}})^{1/3}$ is the T1 radius at the end of the exponential growth stage, where $r_0$ is the initial tumor radius . Replacing the last equation in (\ref{eq:l1l2c})
+by equating the two age estimations. The term $r_{0}(e^{\rho t^{*}})^{1/3}$ represents the T1 radius at the end of the exponential growth stage ($t=t^*$), derived from the assumption of exponential growth of tumor during this stage. That is,
+\begin{equation}
+    \frac{d\mathcal{V}}{dt}=\rho \mathcal{V}
+\end{equation}
+with initial condition $\mathcal{V}(0)=\frac{4}{3}\pi r_0^3$, where $\mathcal{V}$ is the T1 volume. It follows that at the end of exponential growth stage the T1 volume is $\mathcal{V}(0) e^{\rho t}$ and hence its radius is  $r_{0}(e^{\rho t^{*}})^{1/3}$. 
+
+Replacing the last equation in (\ref{eq:l1l2c})
 with the equation above, we have again three equations. To solve these equations for the unknown parameters, we first take 
-(\ref{eq:l1}) over (\ref{eq:l2}) same as previously and get (\ref{eq:f(rho/k)}). It can then be solved for the ratio $\hat{\rho}=\rho/k$. Substituting this back to either $\ell_1=L1$ or $\ell_2=L2$ gives the raito $\rho/D$. Lastly, expressing $D$ and $k$ in terms of $\rho$, (\ref{eq:age est}) can be solved for $\rho$, and $D$ and $k$ follows.
+(\ref{eq:l1}) over (\ref{eq:l2}) same as previously and obtain (\ref{eq:f(rho/k)}). It can then be solved for the ratio $\hat{\rho}=\rho/k$. Substituting this back to either $\ell_1=L1$ or $\ell_2=L2$ gives the raito $\rho/D$. Lastly, expressing $D$ and $k$ in terms of $\rho$, (\ref{eq:age est}) can be solved for $\rho$, and $D$ and $k$ follow.
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=1]{plots/radii_process.eps}\caption{\label{fig:radii_process} The top half of the figure shows an example patient MRI registered to the standard brain domain, with the three tumor segments, necrotic core, enhancing rim, and tumor-associated edema highlighted on a single 2-D slice.  The full 3-D segmentation, and the equivalent tumor sphere with associated radii, $R_0$, $R_1$, and $R_2$, is shown on the figure lower half.}
+\includegraphics[scale=0.81]{plots/radii_process.eps}\caption{\label{fig:radii_process} The top half of the figure shows an example patient MRI registered to the standard brain domain, with the three tumor segments, necrotic core, enhancing rim, and tumor-associated edema highlighted on a single 2-D slice.  The full 3-D segmentation, and the equivalent tumor sphere with associated radii, $R_0$, $R_1$, and $R_2$, is shown on the figure lower half.}
 \end{center}
 \end{figure}
 
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.6]{plots/waveprofile.eps}\includegraphics[scale=0.33]{plots/MR.png}
+\includegraphics[scale=0.56]{plots/waveprofile.eps}\includegraphics[scale=0.33]{plots/MR.png}
 \end{center}
 \caption{\label{fig:Match wid} Left: normalized wave profile generated by the model. Right: tumor profile seen in MR image. Parameter estimation is done by matching model-derived quantities, e.g., $\ell_1$ and $\ell_2$, to the corresponding image-derived ones. }
 
@@ -315,7 +319,7 @@ We first investigate the monotonicity of $f(\cdot)$ for some specific
 choice of $g(w)$ and $\delta(w)$ because it is crucial for parameter
 identifiability. Given our restrictions on $g(w)$ and $\delta(w)$,
 the cumulative density function (CDF) of the Beta distribution family
-suits our purposes.  Therefore, we let $g(w)=B(w;\alpha_g,\beta_g)$ and $\delta(w)=1-B(w;\alpha_{\delta},\beta_{\delta}$, where $B(w; \alpha, \beta)$ is the CDF of Beta distribution with shape parameters $\alpha$ and $\beta$. By tweeting $\alpha$ and $\beta$, we can get linear, sigmoid and concave
+suits our purposes.  Therefore, we let $g(w)=B(w;\alpha_g,\beta_g)$ and $\delta(w)=1-B(w;\alpha_{\delta},\beta_{\delta})$, where $B(w; \alpha, \beta)$ is the CDF of Beta distribution with shape parameters $\alpha$ and $\beta$. By tweeting $\alpha$ and $\beta$, we can get linear, sigmoid and concave
 up/down curves (see left pane of Figure \ref{fig:beta =000026 f}).
 It turns out that our framework is very robust to those choices, i.e.,
 monotonicity of $f(\cdot$) is well preserved (right pane of Figure
@@ -325,14 +329,14 @@ in parameter estimation. Moreover, sigmoid curves are believed to
 be biologically relevant (most enzymatic reaction rates have the same
 shape with respect to reactant concentration). Therefore, we focus
 on this choice and move on to find patient specific parameters using
-their MR images.
+their MRIs.
 
 
 We parameterize our model with patient data in which there is only
-one MR scan before surgery. In Table \ref{tab:Patient-data-para}
+one MRI scan before surgery. In Table \ref{tab:Patient-data-para}
 we summarize the image-derived tumor radii and the corresponding parameters
-estimated by the method introduced in the previous section. We observe
-substantial variation of the parameters among individual patients.
+estimated by the method introduced in the previous section. Hyperparamters $a_1=0.9, a_2=0.1$, $r_0=0.21$ mm are  adapted from numbers found in the literature \cite{Swanson2008, Stepien2015a} and $t^*=14$ days is based on hypothetical duration of exponential growth. We observe
+substantial variation of the parameters among individual patients. 
 
 We compare our approximate quantities to those obtained from the numerical
 solution of the model. As shown in Figure \ref{fig:comparison-to-numerical},
@@ -355,17 +359,17 @@ monotonicity of $f(\cdot)$ given different choices of $g(w)$ and $\delta(w)$ as 
 
 \begin{table}[H]
 \begin{center}
-\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived from T1 and T2 images and the corresponding vital parameters estimated by our protocol. We have preset $a_1=0.9, a_2=0.1$, $r_0=0.21$ mm and $t^*=30$ days, which are adapted from numbers found in the literature \cite{Swanson2008, Stepien2015a}, and based on experimentally verifiable hypotheses.}
+\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived from T1 and T2 images and the corresponding vital parameters estimated by our protocol. We have preset $a_1=0.9, a_2=0.1$, $r_0=0.21$ mm and $t^*=14$ days.}
 \begin{tabular}{ccccccc} \hline
-Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2} $s$^{-1}$ & $\rho$, s$^{-1}$ & $k$, s$^{-1}$\\ \hline
+Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2}$ day$^{-1}$ & $\rho$, \text{day}$^{-1}$ & $k$, \text{day}$^{-1}$\\ \hline
 
-1 & 14.87 & 15.24 & 15.83 & 0.2873 & 0.0529 & 0.0152 \\
-2 & 20.73 & 22.87 & 20.35 & 0.9009 & 0.0462 & 0.0623 \\
-3 & 27.77 & 26.96 & 19.83 & 0.108  & 0.0568 & 0.0107 \\
-4 & 20.48 & 37.03 & 23.8  & 0.6747 & 0.0445 & 0.1342 \\
-5 & 26.34 & 8.17  & 38.05 & 0.7374 & 0.0476 & 0.0426 \\
-6 & 38.24 & 14.2  & 13.31 & 0.1057 & 0.0635 & 0.0041 \\
-7 & 10.91 & 8.29  & 34.33 & 1.2655 & 0.046  & 0.0645 \\ \hline
+1 & 14.87 & 20.73 & 27.77 & 0.6156 & 0.1134 & 0.0325 \\
+2 & 20.48 & 26.34 & 38.24 & 1.9305 & 0.0990 & 0.1335 \\
+3 & 6.61  & 10.91 & 15.24 & 0.2315 & 0.1218 & 0.0230 \\
+4 & 22.87 & 26.96 & 37.03 & 1.4458 & 0.0953 & 0.2876 \\
+5 & 8.17  & 14.20 & 25.10 & 1.5801 & 0.1019 & 0.0914 \\
+6 & 8.29  & 15.83 & 20.35 & 0.2265 & 0.1361 & 0.0087 \\
+7 & 13.31 & 20.19 & 34.33 & 2.7119 & 0.0985 & 0.1381 \\ \hline
 \end{tabular}
 \end{center}
 %(Table body should be created by MS word table function; three-line table is preferred.)
@@ -376,7 +380,7 @@ Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2} $s$^{-1}$ & $\rho
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.7]{plots/scatterplot-new}
+\includegraphics[scale=0.67]{plots/scatterplot-new}
 \end{center}
 
 
@@ -393,14 +397,14 @@ to the value of $\hat{\rho}$. The dots scatter closely to the diagonal line with
 In this work we have extended the proliferation-invasion model previously used by Swanson et al. \cite{Swanson2008} to describe GBM growth by explicitly separating the cancer cell birth and death (or quiescence) processes, with these described via generic functions that depend upon an implicit nutrient or growth factor.  We specify the birth and death processes, $g(w)$ and $\delta(w)$, respectively, by the CDF for a Beta distribution, each uniquely specified by a single parameter, $\rho$ and $k$.  Thus, along with the linear diffusion coefficient, $D$, our model describes cancer growth via three parameters, $D$, $\rho$, and $k$, and yields a tumor morphology (in one dimension) consisting of a necrotic core, a high-density rim, and an outer low density rim, which we may correlate to three radii, $R_0$, $R_1$, and $R_2$, derived from actual patient MR imaging.
 
 We have demonstrated a traveling wave solution to our reaction-diffusion system.  Such a solution is not uncommon in a reaction-diffusion systems,
-and studies on this topic date back to \cite{FISHER1937}. Rigorous
+and studies on this topic date back to the seminal work by Fisher on spread of advantageous genes \cite{FISHER1937}. Rigorous
 proof of the existence of traveling wave solution in a reaction-diffusion
-system often leads to phase space analysis such as in \cite{Dunbar1983}.
+system often leads to phase space analysis such as the one on diffusive Lotka-Volterra equations \cite{Dunbar1983}.
 Not only the high dimension but also the singularity represented in
 the cross diffusion makes any rigorous proof a daunting task. Nevertheless,
 the reduced system is amenable to phase plane analysis and the orbit representing the traveling wave solution can be identified (see appendix).
 
-Via travelling wave analysis, we have developed a method to estimate $D$, $\rho$, and $k$ from either the three tumor radii and a single estimate of tumor growth velocity, if two sequential MRIs are available, or to estimate all three directly from a single MRI under certain assumptions for growth.  We have estimated these parameters for six patient test cases, as shown in Table \ref{tab:Patient-data-para}. Because of the scarcity of individual patient's image data, parameter identifiability in this case is simply justified by the monotonicity of function  $f(\cdot)$ as seen in left pane of Figure \ref{fig:beta =000026 f}, which is in contrast from common statistical approaches \cite{Eisenberg2017} when a fair amount of data are available. 
+Via travelling wave analysis, we have developed a method to estimate $D$, $\rho$, and $k$ from either the three tumor radii and a single estimate of tumor growth velocity, if two sequential MRIs are available, or to estimate all three directly from a single MRI under certain assumptions for growth.  We have estimated these parameters for six patient test cases, as shown in Table \ref{tab:Patient-data-para}. Because of the scarcity of individual patient's image data, parameter identifiability in this case is simply justified by the monotonicity of function  $f(\cdot)$ as seen in left pane of Figure \ref{fig:beta =000026 f}, which is in contrast from common statistical practices \cite{Eisenberg2017} when a fair amount of data are available. 
    
 
 Disaggregating the lumped proliferation term into birth and death processes not only aids in relating (simplified) tumor appearance on MRI, separating considering the rates of birth versus death, instead of a lumped net proliferation term, could also provide valuable information for personalized treatment
@@ -410,7 +414,7 @@ e.g., it may help deciding drug dose so that the drug can perfuse through the wi
 We also use a slightly more complex description of motility than simple diffusion, with our diffusion term in (\ref{eq:main}) falling into a general category called cross diffusion \cite{Madzvamuse2017}.  This represents the phenomenon in which
 the gradient in the concentration of one species can cause a flux
 of another species. This type of cross diffusion considered here was
-studied in a more general and theoretical context \cite{Sherratt2000}, and in \cite{Sherratt2001}, the authors justified the adoption of this
+studied in a more general and theoretical context \cite{Sherratt2000}, and in a modeling study of avascular tumour growth \cite{Sherratt2001}, the authors justified the adoption of this
 proportion-based cross diffusion in a tumor growth model by recognizing
 that tumor cell migration is ``contact inhibited'', i.e., the presence
 of one type of cell prevents the movements of the other. Other types of density-dependent
@@ -426,7 +430,7 @@ birth and death functions.  %While the existence of non-diffusive migration mech
 
 The major contribution of this paper consists in presenting two novel methods
 of making use of scarce MRI data routinely available in clinical
-settings to estimate a three-parameter model for tumor growth.  From a single pre-surgery MRI, patient-specific parameters can be estimated, while an improved estimated can be made if two MRIs are available.  It is also straightforward to extend the current method to make use of MR images taken at three or even more time points.
+settings to estimate a three-parameter model for tumor growth.  From a single pre-surgery MRI, patient-specific parameters can be estimated, while an improved estimated can be made if two MRIs are available.  It is also straightforward to extend the current method to make use of MR images taken at three or even more time points, and conceivably even after resection of the tumor from MR imaging that shows tumor recurrence or expansion. 
 
 As cancers evolve, the underlying parameters describing their growth are likely to evolve as well.  Data assimilation refers to basic method of updating parameters as more data is acquired, and there has been research on applying full-fledged  data assimilation to cancer modeling \cite{Kostelich2011,McDaniel2013}.  The method described in this paper could be incorporated into a data assimilation context in the future.
 
@@ -456,7 +460,7 @@ As cancers evolve, the underlying parameters describing their growth are likely 
 \section*{Acknowledgments}
 The authors would like to thank Leslie Baxter and Leland Ho at Barrow
 Neurological Institute for providing MR images. The work is supported
-by a grant from Arizona Biomedical Research Center. \\
+by a grant from Arizona Biomedical Research Commission, and by funds from the Newsome Chair in Neurosurgery Research held by Dr. Preul. \\
 
 %\section*{Conflict of interest}
 
@@ -673,31 +677,56 @@ by a grant from Arizona Biomedical Research Center. \\
 
 %For more questions regarding reference style, please refer to the \href{http://www.ncbi.nlm.nih.gov/books/NBK7256/}{Citing Medicine}.
 
-\section*{Supplementary}
+\section*{Appendix}
 
-We perform phase plane ($w$-$p$ plane, see Figure \ref{fig:pp}) analysis of (\ref{eq:pp system})
-to show the existence of a trajectory that starts from $(1,0)$ and
-ends at $(w^{*},0)$ where $w^{*}\ge0$ if (\ref{eq:1st assumption})
-are satisfied. The Jacobian matrix at (0,1) is
+The main purpose of this appendix is to rigorous establish the existence of  traveling wave solutions in system (\ref{eq:pp system}). To this end, we first show that the solutions of system (\ref{eq:pp system}) 
+with positive initial values are non-negative and bounded. \\
+ 
+\noindent
+\textbf{Lemma 1.} Assume that $g(w)=wG(w)$ with $G(w)$ a bounded function. Then, the solutions of system (\ref{eq:pp system}) with positive initial values are positive and bounded. \\
+\emph{Proof:} Observe that if $x'=xf(t, x)$ where $f$ is a bounded function, then $x(t)=x(t_0)e^{\int^t_{t_0} f(s, x(s))ds}>0.$
+This implies the positivity of the solutions of system (\ref{eq:pp system}) with positive initial values.
+Since
 \begin{equation}
-\begin{bmatrix}
-\hat{\rho} & 0\\
--\hat{\rho} & 0
-\end{bmatrix}.
+\frac{d(p+w)}{dz}=-\delta(w),
 \end{equation}
-It follows that $(1,0)$ is an unstable fixed point
-and the trajectory starting here has slope $-1$ which is the direction
-of the unstable manifold. Moreover
-\[
-\frac{d^{2}p}{dw^{2}}=\frac{\delta'(w)g(w)-\delta(w)g'(w)}{\hat{\rho} g(w)^{2}}<0
-\]
-for $w\in(0,1)$ because of the assumptions (\ref{eq:1st assumption}) we proposed on $g(w)$ and $\delta(w)$.
-It follows that the trajacory must remain below the line $p=1-w$.
-Assuming $g(w)$ and $\delta(w)$ are continuous, there must be a
-$w^{\dagger}\in(0,1)$ such that $\rho g(w^{\dagger})=\delta(w^{\dagger})$.
-For $w>w^{\dagger}$, the trajectory has positive slope and hence
-heading down to the $w$-axis. Since $\frac{dw}{dz}\vert_{w=0}=0$,
-the trajectory cannot cross $p$-axis. Thus it must intersect the
-$w$-axis at some pont $w^{*}\in(0,w^{\dagger}).$
+we see that $(p+w)$ is bounded, which implies that both $p$ and $w$ are also bounded. $\Box$ \\
+
+Observe that for any $w^*\in [0,1]$, $(0, w^*)$ is an equilibrium of system (\ref{eq:pp system}). \\
+
+\noindent
+\textbf{Theorem 1.}  System (\ref{eq:pp system}) admits positive traveling wave solutions which correspond to the heteroclinic orbits connecting steady state $(0, 1)$ to another steady state $(0, w^*)$. \\
+\emph{Proof:} We perform a detailed phase plane ($w$-$p$ plane, see Figure \ref{fig:pp}) analysis of (\ref{eq:pp system})
+to show the existence of a trajectory that starts from $(1,0)$ and ends at $(w^{*},0)$ where $w^*\in [0,1)$.
+First we notice that 
+%\begin{equations}
+\begin{eqnarray}
+\frac{dp}{dw} & = & \frac{\delta(w)}{\hat{\rho}g(w)}-1 , \\
+\frac{d^{2}p}{dw^{2}} & = & \frac{\delta'(w)g(w)-\delta(w)g'(w)}{\hat{\rho} g(w)^{2}},
+\end{eqnarray}
+%\end{equations}
+Since $g(w)$, $\delta(w)$ are both positive functions with $g'(w)>0$ and $\delta'(w)<0$ on $w\in [0,1]$, thus $\frac{d^{2}p}{dw^{2}}<0$ for all $w\in [0,1]$. 
+
+We show first that the trajectory starts from $(1,0)$ will never cross the line $p=1-w$. \\
+Since $g(1)=1$, $\delta(1)=0$. we have $\frac{dp}{dw}\vert_{w=1}=-1$. Together with $\frac{d^{2}p}{dw^{2}}<0$, we know that the trajectory with $w<1$ will have slope greater than $-1$, which means it won't cross the line $p=1-w$.
+
+Since solution components stay positive, we see that the trajectory starts from $(1,0)$ will never cross the $p$-axis from right to left. 
+
+Due to the monotonicity of the functions $g$ and $\delta$, it is easy to that there is a unique value $w^{\dagger}$ in $(0, 1)$ such that 
+$\frac{dp}{dw}\vert_{w=w^{\dagger}}=0.$ Moreover, $\frac{dp}{dw}\vert_{1>w>w^{\dagger}}>0$ while
+$\frac{dp}{dw}\vert_{0<w<w^{\dagger}}<0.$
+
+Observe that $w$ is strictly decreasing and bounded from below by 0, we conclude that there exists some $w^*\in(0,1)$ such that, $\lim_{z \rightarrow \infty} w(z)=w^*$. 
+
+We claim that $w^*<w^{\dagger}.$ Otherwise, we have $p$ a non-decreasing function, implying the trajectory approaches a positive steady state $E^*=(p^*, w^*).$ However, system (\ref{eq:pp system}) does not admit any positive steady states. 
+
+Let $a \in (w^*, w^{\dagger})$ and $b=\hat{\rho}g(a)-\delta(a)) <0.$ Since
+$\lim_{z \rightarrow \infty}w(z)=w^*$, we see that there is a $z^*>0$ such that for $z \geq z^*$, $w<a$. Therefore, for for $z \geq z^*$, 
+$\frac{dp}{dz}<bp$, implying that $\lim_{z \rightarrow \infty} p(z)=0.$
+Hence, system (\ref{eq:pp system}) admits positive traveling wave solutions which correspond to the heteroclinic orbits connecting steady state $(0, 1)$ to another steady state $(0, w^*)$. $\Box$
+
+
+
+
 
 \end{document}
