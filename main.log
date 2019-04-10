@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.3)  8 APR 2019 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.3)  10 APR 2019 08:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -635,45 +635,42 @@ Package epstopdf Info: Source file: <plots/radii_process.eps>
 (epstopdf)                    size: 289402 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/radii_process-eps-co
 nverted-to.pdf plots/radii_process.eps>
-(epstopdf)             \includegraphics on input line 301.
+(epstopdf)             \includegraphics on input line 297.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./plots/radii_process-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<plots/radii_process-eps-converted-to.pdf, id=173, 315.1775pt x 295.1025pt>
+<plots/radii_process-eps-converted-to.pdf, id=174, 315.1775pt x 295.1025pt>
 File: plots/radii_process-eps-converted-to.pdf Graphic file (type pdf)
 <use plots/radii_process-eps-converted-to.pdf>
 Package pdftex.def Info: plots/radii_process-eps-converted-to.pdf  used on inpu
-t line 301.
+t line 297.
 (pdftex.def)             Requested size: 255.29237pt x 239.0317pt.
 Package epstopdf Info: Source file: <plots/waveprofile.eps>
-(epstopdf)                    date: 2019-04-08 09:47:16
-(epstopdf)                    size: 51806 bytes
+(epstopdf)                    date: 2019-04-10 08:23:49
+(epstopdf)                    size: 51423 bytes
 (epstopdf)             Output file: <plots/waveprofile-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-10 08:24:58
+(epstopdf)                    size: 10682 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/waveprofile-eps-conv
 erted-to.pdf plots/waveprofile.eps>
-(epstopdf)             \includegraphics on input line 308.
-runsystem(repstopdf --outfile=plots/waveprofile-eps-converted-to.pdf plots/wave
-profile.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <plots/waveprofile-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-08 09:49:55
-(epstopdf)                    size: 11407 bytes.
+(epstopdf)             \includegraphics on input line 304.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./plots/waveprofile-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<plots/waveprofile-eps-converted-to.pdf, id=174, 421.575pt x 316.18124pt>
+<plots/waveprofile-eps-converted-to.pdf, id=175, 421.575pt x 316.18124pt>
 File: plots/waveprofile-eps-converted-to.pdf Graphic file (type pdf)
 <use plots/waveprofile-eps-converted-to.pdf>
 Package pdftex.def Info: plots/waveprofile-eps-converted-to.pdf  used on input 
-line 308.
+line 304.
 (pdftex.def)             Requested size: 236.08038pt x 177.06029pt.
-<plots/MR.png, id=175, 388.45125pt x 511.9125pt>
+<plots/MR.png, id=176, 388.45125pt x 511.9125pt>
 File: plots/MR.png Graphic file (type png)
 <use plots/MR.png>
-Package pdftex.def Info: plots/MR.png  used on input line 308.
+Package pdftex.def Info: plots/MR.png  used on input line 304.
 (pdftex.def)             Requested size: 128.1893pt x 168.93164pt.
 
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
@@ -694,17 +691,17 @@ Package epstopdf Info: Source file: <plots/frhok/betas-new.eps>
 (epstopdf)                    size: 7946 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/frhok/betas-new-eps-
 converted-to.pdf plots/frhok/betas-new.eps>
-(epstopdf)             \includegraphics on input line 354.
+(epstopdf)             \includegraphics on input line 350.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./plots/frhok/betas-new-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<plots/frhok/betas-new-eps-converted-to.pdf, id=205, 427.5975pt x 319.1925pt>
+<plots/frhok/betas-new-eps-converted-to.pdf, id=206, 427.5975pt x 319.1925pt>
 File: plots/frhok/betas-new-eps-converted-to.pdf Graphic file (type pdf)
 <use plots/frhok/betas-new-eps-converted-to.pdf>
 Package pdftex.def Info: plots/frhok/betas-new-eps-converted-to.pdf  used on in
-put line 354.
+put line 350.
 (pdftex.def)             Requested size: 213.79822pt x 159.59586pt.
 Package epstopdf Info: Source file: <plots/frhok/frhok-new.eps>
 (epstopdf)                    date: 2019-03-29 23:01:11
@@ -715,18 +712,21 @@ Package epstopdf Info: Source file: <plots/frhok/frhok-new.eps>
 (epstopdf)                    size: 10109 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/frhok/frhok-new-eps-
 converted-to.pdf plots/frhok/frhok-new.eps>
-(epstopdf)             \includegraphics on input line 354.
+(epstopdf)             \includegraphics on input line 350.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./plots/frhok/frhok-new-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<plots/frhok/frhok-new-eps-converted-to.pdf, id=206, 421.575pt x 316.18124pt>
+<plots/frhok/frhok-new-eps-converted-to.pdf, id=207, 421.575pt x 316.18124pt>
 File: plots/frhok/frhok-new-eps-converted-to.pdf Graphic file (type pdf)
 <use plots/frhok/frhok-new-eps-converted-to.pdf>
 Package pdftex.def Info: plots/frhok/frhok-new-eps-converted-to.pdf  used on in
-put line 354.
+put line 350.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
@@ -736,13 +736,13 @@ converted-to.pdf>]
 
 pdfTeX warning: pdflatex (file ./plots/scatterplot-new.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<plots/scatterplot-new.pdf, id=226, 515.9275pt x 497.86pt>
+<plots/scatterplot-new.pdf, id=227, 515.9275pt x 497.86pt>
 File: plots/scatterplot-new.pdf Graphic file (type pdf)
 <use plots/scatterplot-new.pdf>
-Package pdftex.def Info: plots/scatterplot-new.pdf  used on input line 383.
+Package pdftex.def Info: plots/scatterplot-new.pdf  used on input line 379.
 (pdftex.def)             Requested size: 345.66963pt x 333.56447pt.
 
-Underfull \vbox (badness 4940) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (4.68999pt too high) has occurred while \output is active []
@@ -753,28 +753,28 @@ Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 461--464
+Underfull \hbox (badness 10000) in paragraph at lines 457--460
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 481
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 477
 .
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1005) in paragraph at lines 497--503
+Underfull \hbox (badness 1005) in paragraph at lines 493--499
 [] \OT1/txr/m/n/12 M. C. Eisen-berg and H. V. Jain,  A con-fi-dence build-ing e
 x-er-cise in data and iden-ti-
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 497--503
+Underfull \hbox (badness 1028) in paragraph at lines 493--499
 \OT1/txr/m/n/12 fi-a-bil-ity: Mod-el-ing can-cer chemother-apy as a case study,
   \OT1/txr/m/it/12 Jour-nal of The-o-ret-i-cal Bi-ol-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--531
+Underfull \hbox (badness 10000) in paragraph at lines 516--527
 \OT1/txtt/m/n/12 / / www . ncbi . nlm . nih . gov / pubmed / 24101040http : / /
  www . pubmedcentral . nih . gov /
  []
@@ -784,26 +784,26 @@ Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [12]
-Underfull \hbox (badness 3312) in paragraph at lines 583--591
+Underfull \hbox (badness 3312) in paragraph at lines 584--592
 [] \OT1/txr/m/n/12 N. L. Mar-tirosyan, E. M. Rut-ter, W. L. Ramey, E. J. Kostel
 ich, Y. Kuang and
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 583--591
+Underfull \hbox (badness 2460) in paragraph at lines 584--592
 \OT1/txr/m/n/12 M. C. Preul,  Math-e-mat-i-cally mod-el-ing the bi-o-log-i-cal 
 prop-er-ties of gliomas: A re-
  []
 
 
-Underfull \hbox (badness 6461) in paragraph at lines 583--591
+Underfull \hbox (badness 6461) in paragraph at lines 584--592
 \OT1/txr/m/n/12 view,  \OT1/txr/m/it/12 Math-e-mat-i-cal Bio-sciences and En-gi
 -neer-ing\OT1/txr/m/n/12 , \OT1/txr/bx/n/12 12 \OT1/txr/m/n/12 (2015), 879--905
 ,  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--591
+Underfull \hbox (badness 10000) in paragraph at lines 584--592
 [][]$\OT1/txtt/m/n/12 http : / / www . ncbi . nlm . nih . gov / pubmed / 259743
 47http : / / www . aimsciences . org /
  []
@@ -813,42 +813,32 @@ Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [13]
-Underfull \hbox (badness 3209) in paragraph at lines 659--667
+Underfull \hbox (badness 3209) in paragraph at lines 660--668
 [] \OT1/txr/m/n/12 K. R. Swan-son, R. C. Rockne, J. Clar-idge, M. A. Chap-lain,
  E. C. Alvord and
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 659--667
+Underfull \hbox (badness 1389) in paragraph at lines 660--668
 \OT1/txr/m/n/12 Gliomas: In Sil-ico Mod-el-ing In-te-grates Imag-ing and His-to
 l-ogy,  \OT1/txr/m/it/12 Can-cer Re-search\OT1/txr/m/n/12 , \OT1/txr/bx/n/12 71
 
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 659--667
+Underfull \hbox (badness 5771) in paragraph at lines 660--668
 \OT1/txr/m/n/12 (2011), 7366--7375,  URL [][]$\OT1/txtt/m/n/12 http : / / www .
  ncbi . nlm . nih . gov / pubmed / 21900399http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--667
+Underfull \hbox (badness 10000) in paragraph at lines 660--668
 \OT1/txtt/m/n/12 / / www . pubmedcentral . nih . gov / articlerender . fcgi ? a
 rtid = PMC3398690http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 682--684
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--694
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 695--696
+Underfull \hbox (badness 10000) in paragraph at lines 683--685
 
  []
 
@@ -857,49 +847,62 @@ Overfull \vbox (4.68999pt too high) has occurred while \output is active []
 
 
 [14]
+Underfull \hbox (badness 10000) in paragraph at lines 693--695
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
+
+ []
+
+
+Overfull \vbox (4.825pt too high) has occurred while \output is active []
+
+ [15]
 
 pdfTeX warning: pdflatex (file ./logobottom.pdf): PDF inclusion: found PDF vers
 ion <1.6>, but at most version <1.5> allowed
-<logobottom.pdf, id=328, 266.20453pt x 76.19467pt>
+<logobottom.pdf, id=343, 266.20453pt x 76.19467pt>
 File: logobottom.pdf Graphic file (type pdf)
 <use logobottom.pdf>
-Package pdftex.def Info: logobottom.pdf  used on input line 732.
+Package pdftex.def Info: logobottom.pdf  used on input line 736.
 (pdftex.def)             Requested size: 132.13513pt x 37.82053pt.
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 732.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 736.
 
-Underfull \hbox (badness 4779) in paragraph at lines 732--732
+Underfull \hbox (badness 4779) in paragraph at lines 736--736
 [][]\OT1/txr/m/n/12 2019 the Au-thor(s), li-censee AIMS Press. This
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 732--732
+Underfull \hbox (badness 10000) in paragraph at lines 736--736
 \OT1/txr/m/n/12 is an open ac-cess ar-ti-cle dis-tributed un-der the
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 732--732
+Underfull \hbox (badness 6927) in paragraph at lines 736--736
 \OT1/txr/m/n/12 terms of the Cre-ative Com-mons At-tri-bu-tion Li-cense
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 732.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 736.
 
 Overfull \vbox (4.825pt too high) has occurred while \output is active []
 
- [15 <./logobottom.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 732.
+ [16 <./logobottom.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 736.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 732.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 732.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 736.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 736.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 4AF8F12ECB558B531970F30D56F4B59F;393.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 732.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 736.
  ) 
 Here is how much of TeX's memory you used:
- 8895 strings out of 494847
- 129202 string characters out of 6179081
- 225278 words of memory out of 5000000
- 11983 multiletter control sequences out of 15000+600000
+ 8902 strings out of 494847
+ 129272 string characters out of 6179081
+ 226376 words of memory out of 5000000
+ 11985 multiletter control sequences out of 15000+600000
  40893 words of font info for 102 fonts, out of 8000000 for 9000
  60 hyphenation exceptions out of 8191
  43i,17n,40p,1028b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -914,10 +917,10 @@ exmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (15 pages, 1044993 bytes).
+Output written on main.pdf (16 pages, 1047096 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
  102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
