@@ -277,7 +277,7 @@ in terms of which radius (say $R_{1}$ or $R_{2}$) to use. This discrepancy
 can be explained by the common observation that tumor grows exponentially
 at the initial stage and then linearly later on \cite{Kuang}. This
 initial exponential growth stage needs to be taken into account as
-a correction to the aforementioned tumor age estimation. Assuming that from $t=0$ to $t=t^{*}$, quintessence is negligible and the proliferating cancer cells grows exponentially from a point source of density $p_0$, and that after $t=t^*$
+a correction to the aforementioned tumor age estimation. Assuming that from $t=0$ to $t=t^{*}$, quiescence is negligible and the proliferating cancer cells grows exponentially from a point source of density $p_0$, and that after $t=t^*$
 the tumor grows as a traveling wave speed $2\sqrt{\rho D}$, we have
 \begin{eqnarray} \label{eq:age est}
 \frac{R_1-R_1^*}{2\sqrt{\rho D}}& = & \frac{R_{2}-R_2^*}{2\sqrt{\rho D}},
@@ -290,7 +290,7 @@ with $i=1,2$ are respectively T1 and T2 radius at $t=t^*$ (see details of $R_1^*
 
 Replacing the last equation in (\ref{eq:l1l2c})
 with (\ref{eq:age est}), we have again three equations. To solve these equations for the unknown parameters, we first take 
-(\ref{eq:l1}) over (\ref{eq:l2}) same as previously and obtain (\ref{eq:f(rho/k)}). It can then be solved for the ratio $\hat{\rho}=\rho/k$. Substituting this back to either $\ell_1=L1$ or $\ell_2=L2$ gives the raito $\rho/D$. Lastly, expressing $D$ and $k$ in terms of $\rho$, (\ref{eq:age est}) can be solved for $\rho$, and $D$ and $k$ follow.
+(\ref{eq:l1}) over (\ref{eq:l2}) same as previously and obtain (\ref{eq:f(rho/k)}). It can then be solved for the ratio $\hat{\rho}=\rho/k$. Substituting this back to either $\ell_1=L_1$ or $\ell_2=L_2$ gives the raito $\rho/D$. Lastly, expressing $D$ and $k$ in terms of $\rho$, (\ref{eq:age est}) can be solved for $\rho$, and $D$ and $k$ follow.
 
 \begin{figure}
 \begin{center}
@@ -331,7 +331,7 @@ their MRIs.
 We parameterize our model with patient data in which there is only
 one MRI scan before surgery. In Table \ref{tab:Patient-data-para}
 we summarize the image-derived tumor radii and the corresponding parameters
-estimated by the method introduced in the previous section. Hyperparamters $a_1=0.9, a_2=0.1$, $r_0=0.21$ mm are  adapted from numbers found in the literature \cite{Swanson2008, Stepien2015a} and $t^*=14$ days is based on hypothetical duration of exponential growth. We observe
+estimated by the method introduced in the previous section. Hyperparamters $a_1=0.9, a_2=0.1$ are  adapted from numbers found in the literature \cite{Swanson2008}, while $p_0=0.02$  and $t^*=60$ days are hypothetical values. We observe
 substantial variation of the parameters among individual patients. 
 
 We compare our approximate quantities to those obtained from the numerical
@@ -355,7 +355,7 @@ monotonicity of $f(\cdot)$ given different choices of $g(w)$ and $\delta(w)$ as 
 
 \begin{table}[H]
 \begin{center}
-\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived from T1 and T2 images and the corresponding vital parameters estimated by our protocol. We have preset $a_1=0.9, a_2=0.1$, $r_0=0.21$ mm and $t^*=14$ days.}
+\caption{\label{tab:Patient-data-para} Radii of equivalent tumor sphere derived from T1 and T2 images and the corresponding vital parameters estimated by our protocol. We have preset $a_1=0.9, a_2=0.1$, $p_0=0.02$ mm and $t^*=60$ days.}
 \begin{tabular}{ccccccc} \hline
 Patient no. & $R_0$, mm & $R_1$, mm & $R_2$, mm & $D$, mm$^{2}$ day$^{-1}$ & $\rho$, \text{day}$^{-1}$ & $k$, \text{day}$^{-1}$\\ \hline
 
@@ -566,11 +566,6 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 \newblock \emph{{Introduction to mathematical oncology}},
 \newblock Chapman and Hall/CRC.
 
-\bibitem{KotBook}
-\newblock M.~Kot
-\newblock \emph{{Elements of mathematical ecology}},
-\newblock Cambridge University Press, 2001.
-
 \bibitem{Madzvamuse2017}
 \newblock A.~Madzvamuse, R.~Barreira and A.~Gerisch,
 \newblock {Cross-Diffusion in Reaction-Diffusion Models: Analysis, Numerics,
@@ -727,10 +722,10 @@ $\frac{dp}{dz}<bp$, implying that $\lim_{z \rightarrow \infty} p(z)=0.$
 Hence, system (\ref{eq:pp system}) admits positive traveling wave solutions which correspond to the heteroclinic orbits connecting steady state $(0, 1)$ to another steady state $(0, w^*)$. $\Box$
 
 \subsection*{Rim width}
-The trajectory in Figure \ref{fig:pp} corresponds to a traveling wave profile in $z-$coordinate as shown []. Because of our choice of nondimensionlization ($x=-\frac{2 \sqrt{D\rho}}{k} z$), by definition we have the rim width in dimensional form  \[\ell_1= \frac{2 \sqrt{D\rho}}{k} (z_1^+ - z_1^-) = \frac{2 \sqrt{D\rho}}{k} \int_{z_1^-}^{z_1^+} dz\] where $p(z^{\pm}_1)=a_1 p_{\max}$ where we take $p$ as a function of $z$ (see left pane of Figure \ref{fig:Match wid}). We can also take $w$ as a function of $z$ to make a change of variable to the above integral, resulting in (\ref{eq:l1}). Similar argument applies to (\ref{eq:l2})
+The trajectory in Figure \ref{fig:pp} corresponds to a traveling wave profile in $z-$coordinate as shown on the left pane of Figure \ref{fig:Match wid}. Because of our choice of nondimensionlization ($x=-\frac{2 \sqrt{D\rho}}{k} z$), by definition we have the rim width in dimensional form  \[\ell_1= \frac{2 \sqrt{D\rho}}{k} (z_1^+ - z_1^-) = \frac{2 \sqrt{D\rho}}{k} \int_{z_1^-}^{z_1^+} dz\] where $p(z^{\pm}_1)=a_1 p_{\max}$. Note that we have taken $p$ as a function of $z$ (see left pane of Figure \ref{fig:Match wid}). We can also take $w$ as a function of $z$ to make a change of variable to the above integral, resulting in (\ref{eq:l1}). Similar argument applies to (\ref{eq:l2})
  
 \subsection*{Derivation of $R_1^*$ and $R_2^*$}
-Based on the assumption that from $t=0$ to $t=t^{*}$, quintessence is negligible and the proliferating cell population grows exponentially, the governing equation of tumor cell density is \[ \pardiff pt =  D\frac{1}{r^2} \pardiff{}{r} (r^2 \pardiff pr) + \rho p,\] where spherical symmetry is used since spherical effect is important when tumor radius is small. This linear equation has a Green's function \[p(r,t)=\frac{1}{(4 \pi D t)^{3/2}} e^{\rho t - \frac{r^2}{4Dt}}\] (see, e.g., \cite{KotBook} Page 314). Suppose that the tumor starts at $t=0$ as a point source with density $p_0$. It follows that at $t=t^*$, the position of tumor front at density $p=a_i$  is as (\ref{eq:Rstar}). 
+Based on the assumption that from $t=0$ to $t=t^{*}$, quiescence is negligible and the proliferating cell density grows exponentially, the governing equation of tumor cell density is \[ \pardiff pt =  D\frac{1}{r^2} \pardiff{}{r} (r^2 \pardiff pr) + \rho p,\] where spherical symmetry is used since spherical effect is important when tumor radius is small. This linear equation has a Green's function \[p(r,t)=\frac{1}{(4 \pi D t)^{3/2}} e^{\rho t - \frac{r^2}{4Dt}}\] (see, e.g., \cite{KotBook} Page 314 and \cite{BrittonBook} Page 285). Suppose that the tumor starts at $t=0$ as a point source with density $p_0$. It follows that at $t=t^*$, the position of tumor front at density $p=a_i$  is as (\ref{eq:Rstar}). 
 
 
 \end{document}
