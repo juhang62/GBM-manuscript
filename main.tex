@@ -71,7 +71,7 @@ GBMs morphologically typically appear (at least at initial diagnosis) as roughly
 
 Standard care for GBM patients was largely established with the seminal 2005 trial by Stupp et al. \cite{Stupp2005}, and consists of following maximal surgical resection of the primary tumor, six weeks of radiation to the gross tumor volume, plus a 2--3 cm margin, with concomitant oral temozolamide (TMZ), and followed by six months to one year of maintenance TMZ chemotherapy \cite{Gilbert2013}.  Maximal surgical resection also appears to offer some survival benefit.  Nevertheless, the absolute survival benefit even to the most effective therapy is generally measured only in months, and the highly infiltrative nature of GBMs makes recurrence, even with maximal resection and aggressive adjuvant therapy, nearly inevitable, although individual tumors may vary in the degree of invasiveness.
 
-Given the grim situation, mathematical modeling has been proposed as a method to better understand the biophysical rules underlying GBM growth, with the ultimate goal to provide more effective therapy.  Mathematical models have been widely applied to a variety of cancers, and cancer treatment in general (see \cite{Kuang}), with GBM is the focus of many such works (see \cite{GBMreview} for a review).  A popular class of cancer models takes the form of a system of reaction-diffusion equations. In many cases \cite{Harley2014,Gerlee2016,Stepien2018}, such systems generate a traveling wave solution, with the traveling wave speed of great interest, as it is an indicator of how fast the cancer progresses.
+Given the grim situation, mathematical modeling has been proposed as a method to better understand the biophysical rules underlying GBM growth, with the ultimate goal to provide more effective therapy.  Mathematical models have been widely applied to a variety of cancers, and cancer treatment in general (see \cite{Kuang}), with GBM is the focus of many such works (see \cite{Martirosyan2015} for a review).  A popular class of cancer models takes the form of a system of reaction-diffusion equations. In many cases \cite{Harley2014,Gerlee2016,Stepien2018}, such systems generate a traveling wave solution, with the traveling wave speed of great interest, as it is an indicator of how fast the cancer progresses.
 
 However, models which confront the heterogeneity of GBM directly by utilizing spatiotemporal patient-specific data are rare. Swanson and colleagues \cite{Swanson2008,Neal2013,Jackson2015a} have employed variants of the well-known Fisher's equation to study cancer cell proliferation (P) and invasion (I) dynamics \cite{FISHER1937} (hence called PI model in \cite{Jackson2015a}), with net growth and diffusion parameters estimated from two sequential patient MR images.  The basic PI model is given mathematically as
 \begin{equation}
@@ -108,7 +108,7 @@ $x$ are represented by $p(x,t)$ and $q(x,t)$, respectively; quiescent cells are 
 the flux of total population due to migration is $-D\nabla(p+q)$
 where $D$ is a constant diffusion coefficient. It is further assumed
 that the proportion of the total flux contributed by each species
-equals their proportion of the total population, based on the model in \cite{Sherratt2001}.
+equals their proportion of the total population, based on the model in \cite{Sherratt2001b}.
 
 Per capita birth rate is $\tilde{g}(w)$ and the proliferating cells
 become quiescent with per capita rate $\tilde{\delta}(w)$, where $w$, defined as $w=1-p-q$, represents the availability
@@ -410,11 +410,11 @@ e.g., it may help deciding drug dose so that the drug can perfuse through the wi
 We also use a slightly more complex description of motility than simple diffusion, with our diffusion term in (\ref{eq:main}) falling into a general category called cross diffusion \cite{Madzvamuse2017}.  This represents the phenomenon in which
 the gradient in the concentration of one species can cause a flux
 of another species. This type of cross diffusion considered here was
-studied in a more general and theoretical context \cite{Sherratt2000}, and in a modeling study of avascular tumour growth \cite{Sherratt2001}, the authors justified the adoption of this
+studied in a more general and theoretical context \cite{Sherratt2000}, and in a modeling study of avascular tumour growth \cite{Sherratt2001b}, the authors justified the adoption of this
 proportion-based cross diffusion in a tumor growth model by recognizing
 that tumor cell migration is ``contact inhibited'', i.e., the presence
 of one type of cell prevents the movements of the other. Other types of density-dependent
-diffusion have also been considered in modeling GBM migration \cite{Stepien2015a}.
+diffusion have also been considered in modeling GBM migration \cite{Stepien2015}.
 
 Despite the existence of many possible diffusion terms, we note that in our analysis the exact form of diffusion does not
 matter since the second derivatives are dropped in (\ref{eq:1/c^2}).
@@ -462,12 +462,16 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 
 %\bibliographystyle{AIMS}
 %\bibliography{ref}
-
 \providecommand{\href}[2]{#2}
 \providecommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \begin{thebibliography}{10}
+
+\bibitem{BrittonBook}
+\newblock N.~F. Britton,
+\newblock \emph{{Essential mathematical biology}},
+\newblock Springer, 2003.
 
 \bibitem{Canosa1973}
 \newblock J.~Canosa,
@@ -561,6 +565,13 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 \newblock
   \urlprefix\url{http://biologydirect.biomedcentral.com/articles/10.1186/1745-6150-6-64}.
 
+\bibitem{KotBook}
+\newblock M.~Kot,
+\newblock \emph{{Elements of mathematical ecology}},
+\newblock Cambridge University Press, 2001,
+\newblock
+  \urlprefix\url{https://www.cambridge.org/us/academic/subjects/life-sciences/ecology-and-conservation/elements-mathematical-ecology?format=PB{\&}isbn=9780521001502}.
+
 \bibitem{Kuang}
 \newblock Y.~Kuang, J.~D. Nagy and S.~E. Eikenberry,
 \newblock \emph{{Introduction to mathematical oncology}},
@@ -575,15 +586,15 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 \newblock
   \urlprefix\url{http://link.springer.com/10.1007/978-3-319-63082-3{\_}61}.
 
-\bibitem{GBMreview}
+\bibitem{Martirosyan2015}
 \newblock N.~L. Martirosyan, E.~M. Rutter, W.~L. Ramey, E.~J. Kostelich,
   Y.~Kuang and M.~C. Preul,
 \newblock {Mathematically modeling the biological properties of gliomas: A
   review},
 \newblock \emph{Mathematical Biosciences and Engineering}, \textbf{12} (2015),
   879--905,
-\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/25974347
-  http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
+\newblock
+  \urlprefix\url{http://aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
 
 \bibitem{McDaniel2013}
 \newblock J.~McDaniel, E.~Kostelich, Y.~Kuang, J.~Nagy, M.~C. Preul, N.~Z.
@@ -619,13 +630,13 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 \newblock
   \urlprefix\url{http://www.royalsocietypublishing.org/doi/10.1098/rspa.2000.0616}.
 
-\bibitem{Sherratt2001}
+\bibitem{Sherratt2001b}
 \newblock J.~A. Sherratt and M.~A. Chaplain,
 \newblock {A new mathematical model for avascular tumour growth},
 \newblock \emph{Journal of Mathematical Biology}, \textbf{43} (2001), 291--312,
 \newblock \urlprefix\url{http://link.springer.com/10.1007/s002850100088}.
 
-\bibitem{Stepien2015a}
+\bibitem{Stepien2015}
 \newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
 \newblock {A data-motivated density-dependent diffusion model of in vitro
   glioblastoma growth.},

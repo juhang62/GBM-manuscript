@@ -4,6 +4,11 @@
 \providecommand{\urlprefix}{URL }
 \begin{thebibliography}{10}
 
+\bibitem{BrittonBook}
+\newblock N.~F. Britton,
+\newblock \emph{{Essential mathematical biology}},
+\newblock Springer, 2003.
+
 \bibitem{Canosa1973}
 \newblock J.~Canosa,
 \newblock {On a Nonlinear Diffusion Equation Describing Population Growth},
@@ -24,9 +29,17 @@
   three-dimensional mathematical model},
 \newblock \emph{Cell Proliferation}, \textbf{42} (2009), 511--528.
 
+\bibitem{Eisenberg2017}
+\newblock M.~C. Eisenberg and H.~V. Jain,
+\newblock {A confidence building exercise in data and identifiability: Modeling
+  cancer chemotherapy as a case study},
+\newblock \emph{Journal of Theoretical Biology}, \textbf{431} (2017), 63--78,
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0022519317303454?via{\%}3Dihub}.
+
 \bibitem{FISHER1937}
-\newblock R.~A. FISHER,
-\newblock {THE WAVE OF ADVANCE OF ADVANTAGEOUS GENES},
+\newblock R.~A. Fisher,
+\newblock {The wave of advance of advantageous genes},
 \newblock \emph{Annals of Eugenics}, \textbf{7} (1937), 355--369,
 \newblock
   \urlprefix\url{http://doi.wiley.com/10.1111/j.1469-1809.1937.tb02153.x}.
@@ -38,6 +51,19 @@
 \newblock \emph{Mathematical Biosciences}, \textbf{276} (2016), 75--81,
 \newblock
   \urlprefix\url{https://www.sciencedirect.com/science/article/abs/pii/S0025556416000602?via{\%}3Dihub}.
+
+\bibitem{Gilbert2013}
+\newblock M.~R. Gilbert, M.~Wang, K.~D. Aldape, R.~Stupp, M.~E. Hegi, K.~A.
+  Jaeckle, T.~S. Armstrong, J.~S. Wefel, M.~Won, D.~T. Blumenthal, A.~Mahajan,
+  C.~J. Schultz, S.~Erridge, B.~Baumert, K.~I. Hopkins, T.~Tzuk-Shina, P.~D.
+  Brown, A.~Chakravarti, W.~J. Curran and M.~P. Mehta,
+\newblock {Dose-dense temozolomide for newly diagnosed glioblastoma: a
+  randomized phase III clinical trial.},
+\newblock \emph{Journal of clinical oncology : official journal of the American
+  Society of Clinical Oncology}, \textbf{31} (2013), 4085--91,
+\newblock \urlprefix\url{http://ascopubs.org/doi/10.1200/JCO.2013.49.6968
+  http://www.ncbi.nlm.nih.gov/pubmed/24101040
+  http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC3816958}.
 
 \bibitem{Harley2014}
 \newblock K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet and
@@ -75,6 +101,13 @@
 \newblock
   \urlprefix\url{http://biologydirect.biomedcentral.com/articles/10.1186/1745-6150-6-64}.
 
+\bibitem{KotBook}
+\newblock M.~Kot,
+\newblock \emph{{Elements of mathematical ecology}},
+\newblock Cambridge University Press, 2001,
+\newblock
+  \urlprefix\url{https://www.cambridge.org/us/academic/subjects/life-sciences/ecology-and-conservation/elements-mathematical-ecology?format=PB{\&}isbn=9780521001502}.
+
 \bibitem{Kuang}
 \newblock Y.~Kuang, J.~D. Nagy and S.~E. Eikenberry,
 \newblock \emph{{Introduction to mathematical oncology}},
@@ -89,15 +122,15 @@
 \newblock
   \urlprefix\url{http://link.springer.com/10.1007/978-3-319-63082-3{\_}61}.
 
-\bibitem{GBMreview}
+\bibitem{Martirosyan2015}
 \newblock N.~L. Martirosyan, E.~M. Rutter, W.~L. Ramey, E.~J. Kostelich,
   Y.~Kuang and M.~C. Preul,
 \newblock {Mathematically modeling the biological properties of gliomas: A
   review},
 \newblock \emph{Mathematical Biosciences and Engineering}, \textbf{12} (2015),
   879--905,
-\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/25974347
-  http://www.aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
+\newblock
+  \urlprefix\url{http://aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
 
 \bibitem{McDaniel2013}
 \newblock J.~McDaniel, E.~Kostelich, Y.~Kuang, J.~Nagy, M.~C. Preul, N.~Z.
@@ -123,15 +156,6 @@
 \newblock \emph{The neurologist}, \textbf{12} (2006), 279--92,
 \newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/17122724}.
 
-\bibitem{Rutter2017}
-\newblock E.~M. Rutter, T.~L. Stepien, B.~J. Anderies, J.~D. Plasencia, E.~C.
-  Woolf, A.~C. Scheck, G.~H. Turner, Q.~Liu, D.~Frakes, V.~Kodibagkar,
-  Y.~Kuang, M.~C. Preul and E.~J. Kostelich,
-\newblock {Mathematical Analysis of Glioma Growth in a Murine Model},
-\newblock \emph{Scientific reports}, \textbf{7} (2017), 2508,
-\newblock
-  \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/28566701{\%}5Cnhttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC5451439}.
-
 \bibitem{Sherratt2000}
 \newblock J.~A. Sherratt,
 \newblock {Wavefront propagation in a competition equation with a new motility
@@ -142,13 +166,13 @@
 \newblock
   \urlprefix\url{http://www.royalsocietypublishing.org/doi/10.1098/rspa.2000.0616}.
 
-\bibitem{Sherratt2001}
+\bibitem{Sherratt2001b}
 \newblock J.~A. Sherratt and M.~A. Chaplain,
 \newblock {A new mathematical model for avascular tumour growth},
 \newblock \emph{Journal of Mathematical Biology}, \textbf{43} (2001), 291--312,
 \newblock \urlprefix\url{http://link.springer.com/10.1007/s002850100088}.
 
-\bibitem{Stepien2015a}
+\bibitem{Stepien2015}
 \newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
 \newblock {A data-motivated density-dependent diffusion model of in vitro
   glioblastoma growth.},
@@ -162,6 +186,17 @@
 \newblock \emph{SIAM Journal on Applied Mathematics}, \textbf{78} (2018),
   1778--1801,
 \newblock \urlprefix\url{https://epubs.siam.org/doi/10.1137/17M1146257}.
+
+\bibitem{Stupp2005}
+\newblock R.~Stupp, W.~P. Mason, M.~J. van~den Bent, M.~Weller, B.~Fisher,
+  M.~J. Taphoorn, K.~Belanger, A.~A. Brandes, C.~Marosi, U.~Bogdahn,
+  J.~Curschmann, R.~C. Janzer, S.~K. Ludwin, T.~Gorlia, A.~Allgeier,
+  D.~Lacombe, J.~G. Cairncross, E.~Eisenhauer and R.~O. Mirimanoff,
+\newblock {Radiotherapy plus Concomitant and Adjuvant Temozolomide for
+  Glioblastoma},
+\newblock \emph{New England Journal of Medicine}, \textbf{352} (2005),
+  987--996,
+\newblock \urlprefix\url{http://www.nejm.org/doi/abs/10.1056/NEJMoa043330}.
 
 \bibitem{Swanson2011}
 \newblock K.~R. Swanson, R.~C. Rockne, J.~Claridge, M.~A. Chaplain, E.~C.
