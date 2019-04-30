@@ -184,7 +184,7 @@ Substituting these into (\ref{eq:dpdt dqdt}) gives
 \end{eqnarray}
 \end{subequations} where the prime indicates the derivative with
 respect to $\xi$. Linearizing at the wave head, i.e., substitute
-an ansztz $p=Ae^{-r\xi}$ and $q=Be^{-r\xi}$ into (\ref{eq:in wave cord})
+an ansatz $p=Ae^{-r\xi}$ and $q=Be^{-r\xi}$ into (\ref{eq:in wave cord})
 gives $(r^{2}-cr+\rho)A=0$. For a biologically realistic wave front, we expect $A>0,\, B>0$ and $r>0$.
 This requires that $c^2>4\rho$, which implies that the minimum
 speed of the wave $c_{\min}=2\sqrt{\hat{\rho}}$ . It is numerically
@@ -231,7 +231,7 @@ which we will make use of in the next section.
 
 \subsection{Parameter estimation}
 
-From clinical MRI data, we may derived three idealized radii, $R_{0},R_{1}$ and $R_{2}$, representing the radius of the inner necrotic core, the radius to the edge of the contrast-enhancing rim, and the radius to the outer edge of tumor-associated edema.  Such data was extracted from a series of anonymized patient MRI data consisting of T1-contrast enhanced and T2-weighted MRIs at initial diagnosis.  Using SPM 12, MRIs were initially registered to a standard brain space, and then, using Slicer 3D, the total necrotic core volumes, enhancing rim volumes, and tumor-associated edema volumes were determined from semi-manual tumor segmentation.  Finally, these volumes were converted to radii assuming a spherical tumor geometry.  The width of proliferating rim, denoted as $L_{1}$, and the width of the edematous rim, denoted as $L_{2}$, can be calculated as $L_{1}=R_{1}-R_{0}$ and $L_{2}=R_{2}-R_{1}$.  This is demonstrated visually in Figures \ref{fig:radii_process} and \ref{fig:Match wid}.
+From clinical MRI data, we may derived three idealized radii, $R_{0},R_{1}$ and $R_{2}$, representing the radius of the inner necrotic core, the radius to the edge of the contrast-enhancing rim, and the radius to the outer edge of tumor-associated edema.  Such data was extracted from a series of anonymized patient MRI data consisting of T1-contrast enhanced and T2-weighted MRIs at initial diagnosis.  Using SPM 12 \cite{Penny2007}, MRIs were initially registered to a standard brain space, and then, using Slicer 3D \cite{Fedorov2012}, the total necrotic core volumes, enhancing rim volumes, and tumor-associated edema volumes were determined from semi-manual tumor segmentation.  Finally, these volumes were converted to radii assuming a spherical tumor geometry.  The width of proliferating rim, denoted as $L_{1}$, and the width of the edematous rim, denoted as $L_{2}$, can be calculated as $L_{1}=R_{1}-R_{0}$ and $L_{2}=R_{2}-R_{1}$.  This is demonstrated visually in Figures \ref{fig:radii_process} and \ref{fig:Match wid}.
 
 We follow \cite{Swanson2008} in assuming that T1-weighted contrast-enhancing images correlate only with high densities of proliferating tumor cells, while edema on T2-weighted imaging may correspond to low densities of proliferating tumor cells.  We denote the respective detection thresholds for T1 and T2 imaging as $100\times a_{1}\%$ and $100\times a_{2}\%$ of $p_{\max}=\max_{z}\{p(z)\}$ (the actual
 maximum density of proliferating cells given by the traveling wave
@@ -315,7 +315,7 @@ We first investigate the monotonicity of $f(\cdot)$ for some specific
 choice of $g(w)$ and $\delta(w)$ because it is crucial for parameter
 identifiability. Given our restrictions on $g(w)$ and $\delta(w)$,
 the cumulative density function (CDF) of the Beta distribution family
-suits our purposes.  Therefore, we let $g(w)=B(w;\alpha_g,\beta_g)$ and $\delta(w)=1-B(w;\alpha_{\delta},\beta_{\delta})$, where $B(w; \alpha, \beta)$ is the CDF of Beta distribution with shape parameters $\alpha$ and $\beta$. By tweeting $\alpha$ and $\beta$, we can get linear, sigmoid and concave
+suits our purposes.  Therefore, we let $g(w)=B(w;\alpha_g,\beta_g)$ and $\delta(w)=1-B(w;\alpha_{\delta},\beta_{\delta})$, where $B(w; \alpha, \beta)$ is the CDF of Beta distribution with shape parameters $\alpha$ and $\beta$. By tweaking $\alpha$ and $\beta$, we can get linear, sigmoid and concave
 up/down curves (see left pane of Figure \ref{fig:beta =000026 f}).
 It turns out that our framework is very robust to those choices, i.e.,
 monotonicity of $f(\cdot$) is well preserved (right pane of Figure
@@ -426,7 +426,7 @@ birth and death functions.  %While the existence of non-diffusive migration mech
 
 The major contribution of this paper consists in presenting two novel methods
 of making use of scarce MRI data routinely available in clinical
-settings to estimate a three-parameter model for tumor growth.  From a single pre-surgery MRI, patient-specific parameters can be estimated, while an improved estimated can be made if two MRIs are available.  It is also straightforward to extend the current method to make use of MR images taken at three or even more time points, and conceivably even after resection of the tumor from MR imaging that shows tumor recurrence or expansion. 
+settings to estimate a three-parameter model for tumor growth.  From a single pre-surgery MRI, patient-specific parameters can be estimated, while an improved estimate can be made if two MRIs are available.  It is also straightforward to extend the current method to make use of MR images taken at three or even more time points, and conceivably even after resection of the tumor from MR imaging that shows tumor recurrence or expansion. 
 
 As cancers evolve, the underlying parameters describing their growth are likely to evolve as well.  Data assimilation refers to basic method of updating parameters as more data is acquired, and there has been research on applying full-fledged  data assimilation to cancer modeling \cite{Kostelich2011,McDaniel2013}.  The method described in this paper could be incorporated into a data assimilation context in the future.
 
@@ -462,6 +462,7 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 
 %\bibliographystyle{AIMS}
 %\bibliography{ref}
+
 \providecommand{\href}[2]{#2}
 \providecommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -500,6 +501,16 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 \newblock \emph{Journal of Theoretical Biology}, \textbf{431} (2017), 63--78,
 \newblock
   \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0022519317303454?via{\%}3Dihub}.
+
+\bibitem{Fedorov2012}
+\newblock A.~Fedorov, R.~Beichel, J.~Kalpathy-Cramer, J.~Finet, J.-C.
+  Fillion-Robin, S.~Pujol, C.~Bauer, D.~Jennings, F.~Fennessy, M.~Sonka,
+  J.~Buatti, S.~Aylward, J.~V. Miller, S.~Pieper and R.~Kikinis,
+\newblock {3D Slicer as an image computing platform for the Quantitative
+  Imaging Network},
+\newblock \emph{Magnetic Resonance Imaging}, \textbf{30} (2012), 1323--1341,
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0730725X12001816?via{\%}3Dihub}.
 
 \bibitem{FISHER1937}
 \newblock R.~A. Fisher,
@@ -620,6 +631,13 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 \newblock \emph{The neurologist}, \textbf{12} (2006), 279--92,
 \newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/17122724}.
 
+\bibitem{Penny2007}
+\newblock W.~D. Penny, K.~J. K.~J. Friston, J.~Ashburner, S.~Kiebel and
+  T.~Nichols,
+\newblock \emph{{Statistical parametric mapping : the analysis of funtional
+  brain images}},
+\newblock Elsevier/Academic Press, 2007.
+
 \bibitem{Sherratt2000}
 \newblock J.~A. Sherratt,
 \newblock {Wavefront propagation in a competition equation with a new motility
@@ -686,7 +704,7 @@ by a grant from Arizona Biomedical Research Commission, and by funds from the Ne
 
 \section*{Appendix}
 \subsection*{Traveling wave}
-The main purpose of this subsection is to rigorous establish the existence of  traveling wave solutions in system (\ref{eq:pp system}). To this end, we first show that the solutions of system (\ref{eq:pp system}) 
+The main purpose of this subsection is to rigorously establish the existence of  traveling wave solutions in system (\ref{eq:pp system}). To this end, we first show that the solutions of system (\ref{eq:pp system}) 
 with positive initial values are non-negative and bounded. \\
  
 \noindent
