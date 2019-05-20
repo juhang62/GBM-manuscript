@@ -3,49 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: AIMS.bst
 Database file #1: ref.bib
-Warning--I didn't find a database entry for "Sherratt2001"
-Warning--empty year in Kuang
-Warning--empty booktitle in Madzvamuse2017
-Warning--empty booktitle in McDaniel2013
-You've used 26 entries,
+You've used 38 entries,
             3000 wiz_defined-function locations,
-            842 strings with 12912 characters,
-and the built_in function-call counts, 14055 in all, are:
-= -- 1053
-> -- 702
-< -- 0
-+ -- 286
-- -- 260
-* -- 1140
-:= -- 1973
-add.period$ -- 26
-call.type$ -- 26
-change.case$ -- 205
-chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 1026
-empty$ -- 1012
-format.name$ -- 280
-if$ -- 2720
+            909 strings with 15287 characters,
+and the built_in function-call counts, 21288 in all, are:
+= -- 1571
+> -- 1100
+< -- 2
++ -- 452
+- -- 406
+* -- 1713
+:= -- 2974
+add.period$ -- 38
+call.type$ -- 38
+change.case$ -- 312
+chr.to.int$ -- 6
+cite$ -- 38
+duplicate$ -- 1554
+empty$ -- 1513
+format.name$ -- 439
+if$ -- 4113
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 283
-newline$ -- 162
-num.names$ -- 52
-pop$ -- 447
+int.to.str$ -- 38
+missing$ -- 434
+newline$ -- 221
+num.names$ -- 80
+pop$ -- 704
 preamble$ -- 1
-purify$ -- 182
+purify$ -- 274
 quote$ -- 0
-skip$ -- 271
+skip$ -- 401
 stack$ -- 0
-substring$ -- 671
-swap$ -- 681
+substring$ -- 1051
+swap$ -- 1049
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
-warning$ -- 3
-while$ -- 97
-width$ -- 28
-write$ -- 315
-(There were 4 warnings)
+type$ -- 144
+warning$ -- 0
+while$ -- 148
+width$ -- 40
+write$ -- 434
