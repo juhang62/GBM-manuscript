@@ -62,9 +62,11 @@
 \newblock A.~Fedorov, R.~Beichel, J.~Kalpathy-Cramer, J.~Finet, J.-C.
   Fillion-Robin, S.~Pujol, C.~Bauer, D.~Jennings, F.~Fennessy, M.~Sonka,
   J.~Buatti, S.~Aylward, J.~V. Miller, S.~Pieper and R.~Kikinis,
-\newblock {3D Slicer} as an image computing platform for the {Q}uantitative
-  {I}maging {N}etwork,
-\newblock \emph{Magnetic Resonance Imaging}, 1323--1341.
+\newblock {3D Slicer as an image computing platform for the Quantitative
+  Imaging Network},
+\newblock \emph{Magnetic Resonance Imaging}, \textbf{30} (2012), 1323--1341,
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0730725X12001816?via{\%}3Dihub}.
 
 \bibitem{Fisher1937}
 \newblock R.~A. Fisher,

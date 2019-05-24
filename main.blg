@@ -5,42 +5,42 @@ The style file: AIMS.bst
 Database file #1: ref.bib
 You've used 38 entries,
             3000 wiz_defined-function locations,
-            909 strings with 15287 characters,
-and the built_in function-call counts, 21288 in all, are:
-= -- 1571
+            911 strings with 15470 characters,
+and the built_in function-call counts, 21215 in all, are:
+= -- 1558
 > -- 1100
 < -- 2
 + -- 452
 - -- 406
-* -- 1713
-:= -- 2974
+* -- 1724
+:= -- 2969
 add.period$ -- 38
 call.type$ -- 38
 change.case$ -- 312
 chr.to.int$ -- 6
 cite$ -- 38
-duplicate$ -- 1554
-empty$ -- 1513
+duplicate$ -- 1547
+empty$ -- 1509
 format.name$ -- 439
-if$ -- 4113
+if$ -- 4085
 int.to.chr$ -- 0
 int.to.str$ -- 38
-missing$ -- 434
-newline$ -- 221
+missing$ -- 436
+newline$ -- 222
 num.names$ -- 80
-pop$ -- 704
+pop$ -- 700
 preamble$ -- 1
 purify$ -- 274
 quote$ -- 0
-skip$ -- 401
+skip$ -- 385
 stack$ -- 0
-substring$ -- 1051
-swap$ -- 1049
+substring$ -- 1042
+swap$ -- 1047
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 144
 warning$ -- 0
-while$ -- 148
+while$ -- 147
 width$ -- 40
-write$ -- 434
+write$ -- 436
