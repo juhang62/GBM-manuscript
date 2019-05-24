@@ -24,7 +24,7 @@
 \begin{document}
 \global\long\def\pardiff#1#2{\frac{\partial#1}{\partial#2}}%
 
-\title{Patient-Specific Estimates of Glioblastoma Multiforme Growth Dynamics
+\title{Patient-Specific Parameter Estimates of Glioblastoma Multiforme Growth Dynamics
 from a Model with Explicit Birth and Death Rates}
 
 \author{%
@@ -57,7 +57,7 @@ of an inner, largely necrotic core surrounded by an outer,
 contrast-enhancing rim, and often extensive tumor-associated edema beyond.
 This structure is usually demonstrated by magnetic resonance imaging (MRI).
 To help relate the three highly idealized components of GBMs (i.e.,
-necrotic core, enhancing rim, and maximum edema extent) and to the
+necrotic core, enhancing rim, and maximum edema extent) to the
 underlying growth ``laws,'' a mathematical
 model of GBM growth with explicit motility, birth, and death processes is
 proposed. This model generates a traveling wave solution that mimics tumor
@@ -128,7 +128,7 @@ takes the form of a system of reaction-diffusion equations. In many cases
 wave solution, with the traveling wave speed of great interest, as it is an
 indicator of how fast the cancer progresses.
 
-Variants of the Fisher-Kolmogorov equation~\cite{Fisher1937}, originally introduced
+Variants of the Fisher-Kolmogorov equation~\cite{FISHER1937}, originally introduced
 in the 1930s, were first suggested (to our knowledge)
 as models for GBM growth by J.~D. Murray and coworkers.
 The Fisher-Kolmogorov model is given by
@@ -385,8 +385,8 @@ inner necrotic core, the radius to the edge of the contrast-enhancing rim,
 and the radius to the outer edge of tumor-associated edema.  Such data have
 been extracted from a series of anonymized patient MRI data consisting of
 T1-contrast enhanced and T2-weighted MRIs at initial diagnosis.  Using
-SPM~12 \cite{Penny2007}, MRIs are initially registered to a standard brain
-space, and then, using Slicer~3D \cite{Fedorov2012}, the total necrotic core
+the publicly available MATLAB software package, Statistical Parametric Mapping~12 (SPM~12) \cite{Penny2007}, MRIs are initially registered to a standard brain
+space, and then, using Slicer~3D \cite{Fedorov2012} software, the total necrotic core
 volumes, enhancing rim volumes, and tumor-associated edema volumes are
 determined from semi-manual tumor segmentation.  Finally, these volumes are
 converted to radii assuming a spherical tumor geometry.  The width of the
@@ -412,8 +412,7 @@ image-derived wave velocity $V$ is the change in tumor radius divided
 by the length of the time interval.
 
 From our approximate wave profile, we can compute the corresponding
-quantities to match with MR images (cf.\ Figure~\ref{fig:matchwidth}). The
-rim width (in dimensional form) is computed as
+quantities to match with MR images (cf.\ Figure~\ref{fig:matchwidth}). The wae solution based approximation of the width of the proliferating rim, denoted as $l_1$, and the width of the edematous rim, denoted as $l_2$, (in dimensional form) are computed as
 \begin{subequations}
 \begin{eqnarray}
 \ell_{1} & = & \frac{2\sqrt{D\rho}}{k}
@@ -422,7 +421,7 @@ rim width (in dimensional form) is computed as
   \int_{w_{2}}^{w_{1}^-} \frac{dz}{dw}\, dw,\label{eq:l2}
 \end{eqnarray}
 \end{subequations}
-where $w_{1}^{\pm}$ and $w_{2}$ satisfy, respectively,
+respectively, where $w_{1}^{\pm}$ and $w_{2}$ satisfy, respectively,
 $p(w_{1}^{\pm})=a_{1}p_{\mbox{\scriptsize max}}$ and
 $p(w_{2})=a_{2}p_{\mbox{\scriptsize max}}$.  Here
 $p(w)$ is obtained by integrating Eq.~(\ref{eq:dpdw}) (see appendix for details).
@@ -619,12 +618,11 @@ can be estimated from a single patient MR image.
 We have demonstrated that our reaction-diffusion system has a traveling-wave solution,
 which is common in such systems.
 Studies on this topic date back to the Fisher's work in the 1930s on the spread of
-advantageous genes~\cite{Fisher1937}. Rigorous
+advantageous genes~\cite{FISHER1937}. Rigorous
 proof of the existence of traveling wave solution in a reaction-diffusion
 system often leads to phase space analysis such as the one on diffusive
 Lotka-Volterra equations~\cite{Dunbar1983}.  Although in general a rigorous
-proof of a traveling-wave solution is a daunting task, our 
-the reduced system is amenable to phase plane analysis, and the orbit that represents
+proof of a traveling-wave solution is a daunting task, our reduced system is amenable to phase plane analysis, and the orbit that represents
 the traveling wave solution can be identified (see appendix).
 
 Via traveling wave analysis, we have developed a method to estimate $D$, $\rho$, and
@@ -685,15 +683,12 @@ modeling~\cite{Kostelich2011,McDaniel2013}.  The methods described in this paper
 incorporated as part of a future data assimilation system.
 
 \section*{Acknowledgments}
-The work is supported
-by a grant from Arizona Biomedical Research Commission
-and by funds from the Newsome Chair in Neurosurgery Research held by Dr.\ Preul.
+The work is mainly supported by a grant from Arizona Biomedical Research Commission
+and by funds from the Newsome Chair in Neurosurgery Research held by Mark C. Preul. It is also partially supported by NIH grant 5R01GM131405-02 to Yang Kuang.
 The authors would like to thank Dr.\ Leslie Baxter and Dr.\ Leland Hu at the Barrow
 Neurological Institute for providing MR images.
 
-%\section*{Conflict of interest}
-\bibliography{ref}
-\bibliographystyle{AIMS}
+
 
 
 %For more questions regarding reference style, please refer to the \href{http://www.ncbi.nlm.nih.gov/books/NBK7256/}{Citing Medicine}.
@@ -817,245 +812,10 @@ Suppose that the tumor starts at $t=0$ as a point source with density~$p_0$.
 It follows that at $t=t^*$, the position of the tumor front at density $p=a_i$  is 
 given by Eq.~(\ref{eq:Rstar}). 
 
-\end{document}
 
-%\bibliographystyle{AIMS}
-%\bibliography{ref}
-\providecommand{\href}[2]{#2}
-\providecommand{\arxiv}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1}}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\begin{thebibliography}{10}
+\bibliographystyle{AIMS}
+\bibliography{ref}
 
-\bibitem{BrittonBook}
-\newblock N.~F. Britton,
-\newblock \emph{{Essential mathematical biology}},
-\newblock Springer, 2003.
-
-\bibitem{Canosa1973}
-\newblock J.~Canosa,
-\newblock {On a Nonlinear Diffusion Equation Describing Population Growth},
-\newblock \emph{IBM Journal of Research and Development}, \textbf{17} (1973),
-  307--313,
-\newblock \urlprefix\url{http://ieeexplore.ieee.org/document/5391351/}.
-
-\bibitem{Dunbar1983}
-\newblock S.~Dunbar,
-\newblock {Travelling wave solutions of diffusive Lotka-Volterra equations},
-\newblock \emph{Journal of Mathematical Biology}, \textbf{17} (1983), 11--32,
-\newblock \urlprefix\url{http://link.springer.com/10.1007/BF00276112}.
-
-\bibitem{Eikenberry2009}
-\newblock S.~E. Eikenberry, T.~Sankar, M.~C. Preul, E.~J. Kostelich, C.~J.
-  Thalhauser and Y.~Kuang,
-\newblock {Virtual glioblastoma: Growth, migration and treatment in a
-  three-dimensional mathematical model},
-\newblock \emph{Cell Proliferation}, \textbf{42} (2009), 511--528.
-
-\bibitem{Eisenberg2017}
-\newblock M.~C. Eisenberg and H.~V. Jain,
-\newblock {A confidence building exercise in data and identifiability: Modeling
-  cancer chemotherapy as a case study},
-\newblock \emph{Journal of Theoretical Biology}, \textbf{431} (2017), 63--78,
-\newblock
-  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0022519317303454?via{\%}3Dihub}.
-
-\bibitem{Fedorov2012}
-\newblock A.~Fedorov, R.~Beichel, J.~Kalpathy-Cramer, J.~Finet, J.-C.
-  Fillion-Robin, S.~Pujol, C.~Bauer, D.~Jennings, F.~Fennessy, M.~Sonka,
-  J.~Buatti, S.~Aylward, J.~V. Miller, S.~Pieper and R.~Kikinis,
-\newblock {3D Slicer as an image computing platform for the Quantitative
-  Imaging Network},
-\newblock \emph{Magnetic Resonance Imaging}, \textbf{30} (2012), 1323--1341,
-\newblock
-  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0730725X12001816?via{\%}3Dihub}.
-
-\bibitem{FISHER1937}
-\newblock R.~A. Fisher,
-\newblock {The wave of advance of advantageous genes},
-\newblock \emph{Annals of Eugenics}, \textbf{7} (1937), 355--369,
-\newblock
-  \urlprefix\url{http://doi.wiley.com/10.1111/j.1469-1809.1937.tb02153.x}.
-
-\bibitem{Gerlee2016}
-\newblock P.~Gerlee and S.~Nelander,
-\newblock {Travelling wave analysis of a mathematical model of glioblastoma
-  growth},
-\newblock \emph{Mathematical Biosciences}, \textbf{276} (2016), 75--81,
-\newblock
-  \urlprefix\url{https://www.sciencedirect.com/science/article/abs/pii/S0025556416000602?via{\%}3Dihub}.
-
-\bibitem{Gilbert2013}
-\newblock M.~R. Gilbert, M.~Wang, K.~D. Aldape, R.~Stupp, M.~E. Hegi, K.~A.
-  Jaeckle, T.~S. Armstrong, J.~S. Wefel, M.~Won, D.~T. Blumenthal, A.~Mahajan,
-  C.~J. Schultz, S.~Erridge, B.~Baumert, K.~I. Hopkins, T.~Tzuk-Shina, P.~D.
-  Brown, A.~Chakravarti, W.~J. Curran and M.~P. Mehta,
-\newblock {Dose-dense temozolomide for newly diagnosed glioblastoma: a
-  randomized phase III clinical trial.},
-\newblock \emph{Journal of clinical oncology : official journal of the American
-  Society of Clinical Oncology}, \textbf{31} (2013), 4085--91,
-\newblock \urlprefix\url{http://ascopubs.org/doi/10.1200/JCO.2013.49.6968
-  http://www.ncbi.nlm.nih.gov/pubmed/24101040
-  http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC3816958}.
-
-\bibitem{Harley2014}
-\newblock K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet and
-  M.~Wechselberger,
-\newblock {Existence of Traveling Wave Solutions for a Model of Tumor
-  Invasion},
-\newblock \emph{SIAM Journal on Applied Dynamical Systems}, \textbf{13} (2014),
-  366--396,
-\newblock \urlprefix\url{http://epubs.siam.org/doi/10.1137/130923129}.
-
-\bibitem{Jackson2015a}
-\newblock P.~R. Jackson, J.~Juliano, A.~Hawkins-Daarud, R.~C. Rockne and K.~R.
-  Swanson,
-\newblock {Patient-Specific Mathematical Neuro-Oncology: Using a Simple
-  Proliferation and Invasion Tumor Model to Inform Clinical Practice},
-\newblock \emph{Bulletin of Mathematical Biology}, \textbf{77} (2015),
-  846--856,
-\newblock \urlprefix\url{http://link.springer.com/10.1007/s11538-015-0067-7}.
-
-\bibitem{Kim2017}
-\newblock M.~Kim, J.~Kotas, J.~Rockhill, M.~Phillips, M.~Kim, J.~Kotas,
-  J.~Rockhill and M.~Phillips,
-\newblock {A Feasibility Study of Personalized Prescription Schemes for
-  Glioblastoma Patients Using a Proliferation and Invasion Glioma Model},
-\newblock \emph{Cancers}, \textbf{9} (2017), 51,
-\newblock \urlprefix\url{http://www.mdpi.com/2072-6694/9/5/51}.
-
-\bibitem{Kostelich2011}
-\newblock E.~J. Kostelich, Y.~Kuang, J.~M. McDaniel, N.~Z. Moore, N.~L.
-  Martirosyan and M.~C. Preul,
-\newblock {Accurate state estimation from uncertain data and models: an
-  application of data assimilation to mathematical models of human brain
-  tumors},
-\newblock \emph{Biology Direct}, \textbf{6} (2011), 64,
-\newblock
-  \urlprefix\url{http://biologydirect.biomedcentral.com/articles/10.1186/1745-6150-6-64}.
-
-\bibitem{KotBook}
-\newblock M.~Kot,
-\newblock \emph{{Elements of mathematical ecology}},
-\newblock Cambridge University Press, 2001,
-\newblock
-  \urlprefix\url{https://www.cambridge.org/us/academic/subjects/life-sciences/ecology-and-conservation/elements-mathematical-ecology?format=PB{\&}isbn=9780521001502}.
-
-\bibitem{Kuang}
-\newblock Y.~Kuang, J.~D. Nagy and S.~E. Eikenberry,
-\newblock \emph{{Introduction to mathematical oncology}},
-\newblock Chapman and Hall/CRC.
-
-\bibitem{Madzvamuse2017}
-\newblock A.~Madzvamuse, R.~Barreira and A.~Gerisch,
-\newblock {Cross-Diffusion in Reaction-Diffusion Models: Analysis, Numerics,
-  and Applications},
-\newblock Springer, Cham, 2017,
-\newblock 385--392,
-\newblock
-  \urlprefix\url{http://link.springer.com/10.1007/978-3-319-63082-3{\_}61}.
-
-\bibitem{Martirosyan2015}
-\newblock N.~L. Martirosyan, E.~M. Rutter, W.~L. Ramey, E.~J. Kostelich,
-  Y.~Kuang and M.~C. Preul,
-\newblock {Mathematically modeling the biological properties of gliomas: A
-  review},
-\newblock \emph{Mathematical Biosciences and Engineering}, \textbf{12} (2015),
-  879--905,
-\newblock
-  \urlprefix\url{http://aimsciences.org/journals/displayArticlesnew.jsp?paperID=11020}.
-
-\bibitem{McDaniel2013}
-\newblock J.~McDaniel, E.~Kostelich, Y.~Kuang, J.~Nagy, M.~C. Preul, N.~Z.
-  Moore and N.~L. Matirosyan,
-\newblock {Data Assimilation in Brain Tumor Models},
-\newblock Springer, New York, NY, 2013,
-\newblock 233--262,
-\newblock
-  \urlprefix\url{http://link.springer.com/10.1007/978-1-4614-4178-6{\_}9}.
-
-\bibitem{Neal2013}
-\newblock M.~L. Neal, A.~D. Trister, T.~Cloke, R.~Sodt, S.~Ahn, A.~L. Baldock,
-  C.~A. Bridge, A.~Lai, T.~F. Cloughesy, M.~M. Mrugala, J.~K. Rockhill, R.~C.
-  Rockne and K.~R. Swanson,
-\newblock {Discriminating Survival Outcomes in Patients with Glioblastoma Using
-  a Simulation-Based, Patient-Specific Response Metric},
-\newblock \emph{PLoS ONE}, \textbf{8} (2013), e51951,
-\newblock \urlprefix\url{https://dx.plos.org/10.1371/journal.pone.0051951}.
-
-\bibitem{Norden2006}
-\newblock A.~D. Norden and P.~Y. Wen,
-\newblock {Glioma therapy in adults},
-\newblock \emph{The neurologist}, \textbf{12} (2006), 279--92,
-\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/17122724}.
-
-\bibitem{Penny2007}
-\newblock W.~D. Penny, K.~J. K.~J. Friston, J.~Ashburner, S.~Kiebel and
-  T.~Nichols,
-\newblock \emph{{Statistical parametric mapping : the analysis of funtional
-  brain images}},
-\newblock Elsevier/Academic Press, 2007.
-
-\bibitem{Sherratt2000}
-\newblock J.~A. Sherratt,
-\newblock {Wavefront propagation in a competition equation with a new motility
-  term modelling contact inhibition between cell populations},
-\newblock \emph{Proceedings of the Royal Society of London. Series A:
-  Mathematical, Physical and Engineering Sciences}, \textbf{456} (2000),
-  2365--2386,
-\newblock
-  \urlprefix\url{http://www.royalsocietypublishing.org/doi/10.1098/rspa.2000.0616}.
-
-\bibitem{Sherratt2001b}
-\newblock J.~A. Sherratt and M.~A. Chaplain,
-\newblock {A new mathematical model for avascular tumour growth},
-\newblock \emph{Journal of Mathematical Biology}, \textbf{43} (2001), 291--312,
-\newblock \urlprefix\url{http://link.springer.com/10.1007/s002850100088}.
-
-\bibitem{Stepien2015}
-\newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
-\newblock {A data-motivated density-dependent diffusion model of in vitro
-  glioblastoma growth.},
-\newblock \emph{Mathematical biosciences and engineering : MBE}, \textbf{12}
-  (2015), 1157--72,
-\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/26775861}.
-
-\bibitem{Stepien2018}
-\newblock T.~L. Stepien, E.~M. Rutter and Y.~Kuang,
-\newblock {Traveling Waves of a Go-or-Grow Model of Glioma Growth},
-\newblock \emph{SIAM Journal on Applied Mathematics}, \textbf{78} (2018),
-  1778--1801,
-\newblock \urlprefix\url{https://epubs.siam.org/doi/10.1137/17M1146257}.
-
-\bibitem{Stupp2005}
-\newblock R.~Stupp, W.~P. Mason, M.~J. van~den Bent, M.~Weller, B.~Fisher,
-  M.~J. Taphoorn, K.~Belanger, A.~A. Brandes, C.~Marosi, U.~Bogdahn,
-  J.~Curschmann, R.~C. Janzer, S.~K. Ludwin, T.~Gorlia, A.~Allgeier,
-  D.~Lacombe, J.~G. Cairncross, E.~Eisenhauer and R.~O. Mirimanoff,
-\newblock {Radiotherapy plus Concomitant and Adjuvant Temozolomide for
-  Glioblastoma},
-\newblock \emph{New England Journal of Medicine}, \textbf{352} (2005),
-  987--996,
-\newblock \urlprefix\url{http://www.nejm.org/doi/abs/10.1056/NEJMoa043330}.
-
-\bibitem{Swanson2011}
-\newblock K.~R. Swanson, R.~C. Rockne, J.~Claridge, M.~A. Chaplain, E.~C.
-  Alvord and A.~R.~A. Anderson,
-\newblock {Quantifying the Role of Angiogenesis in Malignant Progression of
-  Gliomas: In Silico Modeling Integrates Imaging and Histology},
-\newblock \emph{Cancer Research}, \textbf{71} (2011), 7366--7375,
-\newblock \urlprefix\url{http://www.ncbi.nlm.nih.gov/pubmed/21900399
-  http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC3398690
-  http://cancerres.aacrjournals.org/cgi/doi/10.1158/0008-5472.CAN-11-1399}.
-
-\bibitem{Swanson2008}
-\newblock K.~R. Swanson, R.~C. Rostomily and E.~C. Alvord,
-\newblock {A mathematical modelling tool for predicting survival of individual
-  patients following resection of glioblastoma: a proof of principle},
-\newblock \emph{British Journal of Cancer}, \textbf{98} (2008), 113--119,
-\newblock \urlprefix\url{http://www.nature.com/articles/6604125}.
-
-\end{thebibliography}
 
 
 \end{document}
