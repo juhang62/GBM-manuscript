@@ -17,8 +17,7 @@
 \RequirePackage{graphicx,xcolor}
 \RequirePackage{ifthen,calc}
 \RequirePackage{amsfonts,amssymb,amsmath,amsthm}
-\RequirePackage[colorlinks,breaklinks]{hyperref}
-  \hypersetup{urlcolor=blue, citecolor=red}
+\RequirePackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=black,breaklinks]{hyperref}
 \RequirePackage[a4paper,top=2.54cm,bottom=2.54cm,left=1.90cm,right=1.90cm,%
                 headsep=1em,includehead,includefoot]{geometry}
 \RequirePackage{float}
@@ -354,7 +353,7 @@
   \@ifundefined{href}{\DOI}{\href{http://dx.doi.org/\DOI}{DOI: \DOI}}
 }
 
-\def\volinfonew{Mathematical Biosciences and Engineering, \currentvolume (\currentissue)}
+\def\volinfonew{MBE, \currentvolume (\currentissue)}
 \def\volinfo{Volume \currentvolume, Issue \currentissue}
 
 %\def\Publname{%
