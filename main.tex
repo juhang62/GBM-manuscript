@@ -60,7 +60,7 @@ To help relate the three highly idealized components of GBMs (i.e.,
 necrotic core, enhancing rim, and maximum edema extent) to the
 underlying growth ``laws,'' a mathematical
 model of GBM growth with explicit motility, birth, and death processes is
-proposed. This model generates a traveling wave solution that mimics tumor
+proposed. This model generates a traveling-wave solution that mimics tumor
 progression.
 We develop several novel methods to approximate key characteristics of
 the wave profile, which can be compared with MRI data. Several simplified
@@ -124,8 +124,8 @@ models have been widely applied to a variety of cancers and to cancer
 treatment in general~\cite{Kuang}, and GBM is the focus of many such works
 (see \cite{Martirosyan2015} for a review).  A popular class of cancer models
 takes the form of a system of reaction-diffusion equations. In many cases
-\cite{Harley2014,Gerlee2016,Stepien2018}, such systems generate a traveling
-wave solution, with the traveling wave speed of great interest, as it is an
+\cite{Harley2014,Gerlee2016,Stepien2018}, such systems generate a traveling-wave
+solution, with the traveling-wave speed of great interest, as it is an
 indicator of how fast the cancer progresses.
 
 Variants of the Fisher-Kolmogorov equation~\cite{Fisher1937}, originally introduced
@@ -185,7 +185,7 @@ relative contributions of cellular proliferation, motility, and necrosis to the
 observed image features.
 
 The next section describes our model and its
-assumptions.  We demonstrate that the model has a traveling wave solution
+assumptions.  We demonstrate that the model has a traveling-wave solution
 and present the approximate wave profile.  We describe a simple procedure to
 estimate patient-specific parameters by fitting the approximate wave profile to a
 tumor profile derived from patient MRIs. The identifiability of the model
@@ -228,8 +228,9 @@ type of model has successfully captured the structure of a growing tumor.
 
 The per capita birth rate is $\tilde{g}(w)$; proliferating cells
 become quiescent at the per capita rate $\tilde{\delta}(w)$, where $w$
-(Eq.~\ref{w-eq})) represents the availability
-of space or some generic nutrient, which we call ``growth factor'' henceforth.
+(Eq.~\ref{w-eq}) represents the availability
+of space or some generic nutrient, which we will call \emph{growth factor}
+henceforth.
 We have scaled the maximum cell density to be~$1$. In our
 model, necrosis is not explicitly included but can be regarded as being
 lumped into~$q$.  Insofar as quiescent cells cannot become proliferative,
@@ -247,8 +248,8 @@ To make the model biologically reasonable, we impose the following constraints o
 \label{eq:1assume}
 \end{equation}
 That is, birth (death) should increase (decrease) with the availability of
-the growth factor, there is more birth than death at maximum values of
-the growth factor, and there is only death with no growth in the 
+the growth factor; there is more birth than death at maximum values of
+the growth factor; and there is only death with no growth in the 
 absence of growth factor. 
 It is also assumed that the death rate is negligible at maximum values of
 the growth factor.  With these assumptions, we observe numerically that with suitable initial conditions, the solution of (\ref{eq:main3d}) stays positive and is bounded ($p+q\le 1$) for all~$t$. 
@@ -316,9 +317,9 @@ Substituting these into (\ref{eq:main1d}) gives
 \begin{subequations}\label{eq:wavecoord}
 \begin{eqnarray}
 \frac{d}{d\xi}\left[\left(\frac{p}{p+q}\right)\frac{d}{d\xi}(p+q)\right]+
-  c\,\frac{dp}{d\xi}+ \hat{\rho}g(w)\,p-\delta(w)\,p & = & 0 \\[\medskipamount]
+  c\,\frac{dp}{d\xi}+ \hat{\rho}g(w)p-\delta(w)p & = & 0 \\[\medskipamount]
 \frac{d}{d\xi} \left[\left(\frac{q}{p+q}\right)\frac{d}{d\xi}(p+q)\right]+
-  c\,\frac{dq}{d\xi}+\delta(w)\,p & = & 0.
+  c\,\frac{dq}{d\xi}+\delta(w)p & = & 0.
 \end{eqnarray}
 \end{subequations}
 Linearizing at the wave head, i.e., substituting the
@@ -338,10 +339,10 @@ which leads to
 \begin{eqnarray}
 \frac{1}{c^{2}}\,\frac{d}{dz}\left[
   \left(\frac{p}{p+q}\right)\frac{d}{dz}(p+q)\right]
-   -\frac{dp}{dz}+\hat{\rho}g(w)\,p-\delta(w)\,p & = & 0,
+   -\frac{dp}{dz}+\hat{\rho}g(w)p-\delta(w)p & = & 0,
    \label{eq:1/c^2a} \\[\medskipamount]
 \frac{1}{c^{2}}\,\frac{d}{dz}\left[\left(\frac{q}{p+q}\right)
-   \frac{d}{dz}(p+q)\right]- \frac{dq}{dz} +\delta(w)\, p & = & 0. \label{eq:1/c^2b}
+   \frac{d}{dz}(p+q)\right]- \frac{dq}{dz} +\delta(w) p & = & 0. \label{eq:1/c^2b}
 \end{eqnarray}
 \end{subequations}
 Assuming that $1/c^{2}$ is small, we neglect each first term
@@ -351,10 +352,10 @@ of $p$ and~$w$, we obtain the reduced system
 \begin{align}
 \frac{dp}{dz} & =p\,\bigl(\hat{\rho}g(w)-\delta(w)\bigr),
    \label{eq:dpdz} \\[\medskipamount]
-\frac{dw}{dz} & =-\hat{\rho}\,pg(w),\label{eq:dwdz}
+\frac{dw}{dz} & =-p\,\hat{\rho}g(w),\label{eq:dwdz}
 \end{align}
 \end{subequations}
-which is amenable to phase plane analysis. The
+which is amenable to phase-plane analysis. The
 approximate wave solution corresponds to a trajectory that leaves
 $(0,1)$ and ends at $(0,w^{*})$, with $w^{*}\in[0,1)$ 
 (see Figure~\ref{fig:pp}).  (In the appendix, we show that such a trajectory
@@ -371,7 +372,7 @@ use in the next section.
 \begin{center}
 \includegraphics[scale=0.55]{plots/pp-edited.pdf}
 \end{center}
-\caption{A typical trajectory that connects $(0,1)$ and $(0,w^*)$ in the phase plane. Given $\delta(w)$ and $g(w)$, this trajectory can be found by integrating~(\ref{eq:dpdw}).  It represents an approximate traveling wave solution.  See the appendix for a proof of its existence under general assumptions.}
+\caption{A typical trajectory that connects $(0,1)$ and $(0,w^*)$ in the phase plane. Given $\delta(w)$ and $g(w)$, this trajectory can be found by integrating~(\ref{eq:dpdw}).  It represents an approximate traveling-wave solution.  See the appendix for a proof of its existence under general assumptions.}
 \label{fig:pp}
 \end{figure}
 
@@ -402,7 +403,7 @@ respective detection thresholds for T1 and T2 imaging as
 $a_1p_{\mbox{\scriptsize max}}$ and $a_2 p_{\mbox{\scriptsize max}}$,
 where $0 < a_2 < a_1 < 1$ and 
 $p_{\mbox{\scriptsize max}}=\max_{z} p(z)$,
-i.e., the maximum density of proliferating cells given by the traveling wave
+i.e., the maximum density of proliferating cells given by the traveling-wave
 solution.
 
 Often only a single MRI series is available before surgery, although in some
@@ -412,7 +413,10 @@ image-derived wave velocity $V$ is the change in tumor radius divided
 by the length of the time interval.
 
 From our approximate wave profile, we can compute the corresponding
-quantities to match with MR images (cf.\ Figure~\ref{fig:matchwidth}). The wae solution based approximation of the width of the proliferating rim, denoted as $l_1$, and the width of the edematous rim, denoted as $l_2$, (in dimensional form) are computed as
+quantities to match with MR images (cf.\ Figure~\ref{fig:matchwidth}). The 
+wave-solution based approximation of the width of the proliferating rim, 
+denoted~$\ell_1$, and the width of the edematous rim, denoted~$\ell_2$,
+(in dimensional form) are computed as
 \begin{subequations}
 \begin{eqnarray}
 \ell_{1} & = & \frac{2\sqrt{D\rho}}{k}
@@ -426,8 +430,8 @@ $p(w_{1}^{\pm})=a_{1}p_{\mbox{\scriptsize max}}$ and
 $p(w_{2})=a_{2}p_{\mbox{\scriptsize max}}$.  Here
 $p(w)$ is obtained by integrating Eq.~(\ref{eq:dpdw}) (see appendix for details).
 Additionally, the model-derived wave speed $c=2\sqrt{\rho D}$
-can be matched with image-derived speed
-$V$. Thus we have three nonlinear equations
+can be matched with the image-derived speed~$V$.
+Thus we have three nonlinear equations
 \begin{equation}
 \ell_{1}=L_{1},\quad \ell_{2}=L_{2},\quad c=V,
 \label{eq:l1l2c}
@@ -445,7 +449,7 @@ f(\hat{\rho})\equiv
 insofar as the integrals are functions of~$\hat{\rho}$. 
 Equation~(\ref{eq:frhohat})
 can be solved for $\hat{\rho}$ analytically in special cases or numerically
-in general.  The monotonicity of $f(\cdot)$ is important
+in general.  The monotonicity of $f(\hat{\rho})$ is important
 for the identifiability of parameters. Once we find~$\hat{\rho}$, i.e., the ratio 
 $\rho/k$, all parameters can be found by back substitution.
 
@@ -511,7 +515,7 @@ image-derived ones.}
 \section{Results}
 
 Monotonicity is crucial for parameter identifiability, so we
-first investigate the monotonicity of $f(\cdot)$ for some specific
+first investigate the monotonicity of $f$ for some specific
 choices of $g(w)$ and $\delta(w)$.
 Given the restrictions described in Section~\ref{model-sec},
 the cumulative density function (CDF) of the Beta distribution family
@@ -560,7 +564,7 @@ from the image data.
 functions satisfy Eq.~(\ref{eq:1assume})  and serve as candidates to represent
 biological response to limitation of growth factors. Right:
 monotonicity of $f(\hat\rho)$ given different choices of $g(w)$ and $\delta(w)$ as
-indicated in the legend. All choices lead to a monotonic function $f(\cdot)$ and hence
+indicated in the legend. All choices lead to a monotonic function $f(\hat\rho)$ and hence
 identifiable parameters.}
 \label{fig:beta26f}
 \end{figure}
@@ -619,19 +623,20 @@ We have demonstrated that our reaction-diffusion system has a traveling-wave sol
 which is common in such systems.
 Studies on this topic date back to the Fisher's work in the 1930s on the spread of
 advantageous genes~\cite{Fisher1937}. Rigorous
-proof of the existence of traveling wave solution in a reaction-diffusion
-system often leads to phase space analysis such as the one on diffusive
+proof of the existence of a traveling-wave solution in a reaction-diffusion
+system often leads to phase-space analysis such as the one on the diffusive
 Lotka-Volterra equations~\cite{Dunbar1983}.  Although in general a rigorous
-proof of a traveling-wave solution is a daunting task, our reduced system is amenable to phase plane analysis, and the orbit that represents
-the traveling wave solution can be identified (see appendix).
+proof of a traveling-wave solution is a daunting task, our reduced system is
+amenable to phase-plane analysis, and the orbit that represents
+the traveling-wave solution can be identified (see appendix).
 
-Via traveling wave analysis, we have developed a method to estimate $D$, $\rho$, and
+Via traveling-wave analysis, we have developed a method to estimate $D$, $\rho$, and
 $k$ from as few as a single magnetic resonance image, based on certain growth
 assumptions. We have estimated these parameters for six
 patient test cases, as shown in Table~\ref{tab:Patient-data-para}. Because of the
 sparsity of imaging data for a typical patient,
 parameter identifiability in this case is provided
-by the monotonicity of the function  $f(\cdot)$ (as seen in left pane of
+by the monotonicity of the function  $f(\hat\rho)$ (as seen in left pane of
 Figure~\ref{fig:beta26f});  our approach differs from more common statistical
 practices~\cite{Eisenberg2017} that are appropriate when more data are available. 
    
@@ -684,7 +689,7 @@ incorporated as part of a future data assimilation system.
 
 \section*{Acknowledgments}
 The work is mainly supported by a grant from Arizona Biomedical Research Commission
-and by funds from the Newsome Chair in Neurosurgery Research held by Mark C. Preul. It is also partially supported by NIH grant 5R01GM131405-02 to Yang Kuang.
+and by funds from the Newsome Chair in Neurosurgery Research held b Mayrk C. Preul. It is also partially supported by NIH grant 5R01GM131405-02 to Yang Kuang.
 The authors would like to thank Dr.\ Leslie Baxter and Dr.\ Leland Hu at the Barrow
 Neurological Institute for providing MR images.
 
@@ -720,7 +725,7 @@ that correspond to heteroclinic orbits connecting the steady state $(0, 1)$ to a
 steady state, $(0, w^*)$.
 
 \indent
-\emph{Proof:} We have performed a detailed phase plane analysis of~(\ref{eq:pp system})
+\emph{Proof:} We have performed a detailed phase-plane analysis of~(\ref{eq:pp system})
 to show the existence of a trajectory that starts from $(1,0)$ and ends at $(w^{*},0)$,
 where $w^*\in [0,1)$.  (See Figure \ref{fig:pp}.)
 First we notice that 
@@ -760,7 +765,7 @@ correspond to heteroclinic orbits connecting the steady state $(0, 1)$ to
 another steady state, $(0, w^*)$.~$\Box$
 
 \subsection*{Rim width}
-The trajectory in Figure~\ref{fig:pp} corresponds to a traveling wave profile in the
+The trajectory in Figure~\ref{fig:pp} corresponds to a traveling-wave profile in the
 $z$~coordinate as shown on the left pane of Figure~\ref{fig:matchwidth}. Because of our
 choice of nondimensionlization, $x=-\left(2 \sqrt{D\rho}\,/k\right) z$, 
 by definition we have the rim width in the dimensional form  
@@ -857,7 +862,7 @@ given by Eq.~(\ref{eq:Rstar}).
 
 \bibitem{Dunbar1983}
 \newblock S.~Dunbar,
-\newblock Traveling wave solutions of diffusive lotka-volterra equations,
+\newblock Traveling-wave solutions of diffusive Lotka-Volterra equations,
 \newblock \emph{Journal of Mathematical Biology}, \textbf{17} (1983), 11--32,
 \newblock \urlprefix\url{http://link.springer.com/10.1007/BF00276112}.
 
@@ -893,7 +898,7 @@ given by Eq.~(\ref{eq:Rstar}).
 
 \bibitem{Gerlee2016}
 \newblock P.~Gerlee and S.~Nelander,
-\newblock Traveling wave analysis of a mathematical model of glioblastoma
+\newblock Traveling-wave analysis of a mathematical model of glioblastoma
   growth,
 \newblock \emph{Mathematical Biosciences}, \textbf{276} (2016), 75--81,
 \newblock
@@ -911,7 +916,7 @@ given by Eq.~(\ref{eq:Rstar}).
 \bibitem{Harley2014}
 \newblock K.~Harley, P.~van Heijster, R.~Marangell, G.~J. Pettet and
   M.~Wechselberger,
-\newblock Existence of traveling wave solutions for a model of tumor invasion,
+\newblock Existence of traveling-wave solutions for a model of tumor invasion,
 \newblock \emph{SIAM Journal on Applied Dynamical Systems}, \textbf{13} (2014),
   366--396,
 \newblock \urlprefix\url{http://epubs.siam.org/doi/10.1137/130923129}.
